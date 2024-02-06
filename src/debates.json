@@ -1,0 +1,22 @@
+[
+    {
+        "title": "PS vs IL",
+        "thumbnail": "https://images.impresa.pt/sicnot/2024-02-05-Pedro-Nuno-Santos-Rui-Rocha-e66319ff/16x9/mw-1200&outputFormat=jpeg",
+        "slug": "ps-vs-il"
+    },
+    {
+        "title": "Chega vs PAN",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12900/p12900_1_2024020515461.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "chega-vs-pan"
+    },
+    {
+        "title": "PCP vs PAN",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12900/p12900_1_2024020615498.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "pcp-vs-pan"
+    },
+    {
+        "title": "BE vs PSD",
+        "thumbnail": "https://images.impresa.pt/sicnot/2024-02-06-Mortagua-Montenegro-9d90a5bf/16x9/mw-1200&outputFormat=jpeg",
+        "slug": "be-vs-psd"
+    }
+]

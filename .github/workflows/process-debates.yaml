@@ -1,0 +1,36 @@
+name: Process Debates
+
+#on:
+#  push:
+#    paths:
+#      - 'debates.yaml'
+#
+jobs:
+  process-debates:
+    defaults:
+      run:
+        shell: bash -leo pipefail {0}
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: mamba-org/setup-micromamba@v1
+        name: install whisperx and other deps
+        with:
+          micromamba-version: '1.3.1-0'
+          environment-file: environment.yml
+          init-shell: >-
+            bash
+          cache-environment: true
+          post-cleanup: 'all'
+
+      - name: Process Debates
+        run: python process_debates.py debates.yaml public/debates
+
+      - name: Commit and Push Changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: 'Update debates data'
+          add: 'public/debates/'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
