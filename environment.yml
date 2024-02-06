@@ -1,0 +1,15 @@
+name: debates
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+dependencies:
+  - python=3.10
+  - pytorch=2.0.0
+  - ffmpeg=6.1.1
+  - pip:
+    - beautifulsoup4
+    - webvtt-to-json
+    - git+https://github.com/m-bain/whisperx.git@8227807#egg=whisperx
+    - torchaudio==2.0.0
+    - webvtt
