@@ -56,7 +56,9 @@
 
       const messageElements = chatContainer.querySelectorAll('.message');
       const currentMessageElement = messageElements[lastPastMessageIndex];
-      if (currentMessageElement) {
+
+      // if video is playing, auto scroll to the current message
+      if (currentMessageElement && !video.paused) {
         chatContainer.scrollTop = currentMessageElement.offsetTop - chatContainer.offsetTop - 20; // Adjust 20px offset if needed
       }
     });
