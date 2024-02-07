@@ -189,7 +189,7 @@ def transcribe_audio(audio_path, output_root):
         (output_root / f"transcriptions/{name}.vtt").unlink()
 
 
-def process_debate(*, title, url, output_root):
+def process_debate(*, title, url, output_root, skip_transcription=False):
     """
     Process a debate from the input data
     """
@@ -223,7 +223,9 @@ def process_debate(*, title, url, output_root):
         headers = None
 
     get_audio_and_video(m3u8_url, audio_path, hls_path, headers=headers)
-    transcribe_audio(audio_path, output_root)
+
+    if not skip_transcription:
+        transcribe_audio(audio_path, output_root)
 
     out = {
         "slug": slug,
@@ -252,7 +254,7 @@ def main(args):
         if output_path.exists() and not args.force:
             continue
 
-        summary = process_debate(**debate, output_root=output_root)
+        summary = process_debate(**debate, output_root=output_root, skip_transcription=args.skip_transcription)
         master_json.append(summary)
 
     with open(args.output_master_json, "w") as f:
@@ -265,5 +267,6 @@ if __name__ == "__main__":
     parser.add_argument("--output_root", type=str, default="public/debates")
     parser.add_argument("--output-master-json", type=str, default="src/debates.json")
     parser.add_argument("--force", action="store_true")
+    parser.add_argument("--skip-transcription", action="store_true")
     args = parser.parse_args()
     main(args)
