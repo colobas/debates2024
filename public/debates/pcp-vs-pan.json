@@ -1,21 +1,5 @@
 {
     "slug": "pcp-vs-pan",
     "title": "PCP vs PAN",
-    "original_url": "https://www.rtp.pt/play/p12900/e746296/debates-legislativas-2024",
-    "m3u8_url": "https://streaming-vod.rtp.pt/hls/nas2.share,/h264/512x384/p12900/p12900_1_2024020615498.mp4,.urlset/master.m3u8",
-    "headers": {
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:122.0) Gecko/20100101 Firefox/122.0",
-        "Accept": "*/*",
-        "Accept-Language": "en-US,en;q=0.5",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Referer": "https://www.rtp.pt/",
-        "Origin": "https://www.rtp.pt",
-        "DNT": "1",
-        "Sec-GPC": "1",
-        "Connection": "keep-alive",
-        "Sec-Fetch-Dest": "empty",
-        "Sec-Fetch-Mode": "cors",
-        "Sec-Fetch-Site": "same-site",
-        "TE": "trailers"
-    }
+    "original_url": "https://www.rtp.pt/play/p12900/e746296/debates-legislativas-2024"
 }

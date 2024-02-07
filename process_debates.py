@@ -80,29 +80,51 @@ def find_m3u8_and_thumbnail(url):
     return None, None
 
 
-def get_audio(url, output_path, headers=None):
+def get_audio_and_video(url, audio_path, hls_path, headers=None):
     """
-    Use ffmpeg to download the audio from a given m3u8 link
+    Use ffmpeg to download the audio and video from a given m3u8 link
     """
 
-    if Path(output_path).exists():
+    if Path(audio_path).exists() and Path(hls_path).exists():
         return
 
-    Path(output_path).parent.mkdir(exist_ok=True, parents=True)
+    Path(audio_path).parent.mkdir(exist_ok=True, parents=True)
+    Path(hls_path).parent.mkdir(exist_ok=True, parents=True)
 
+    mp4_path = hls_path.with_suffix(".mp4")
+
+    # download video
+    if not mp4_path.exists():
+        if headers is not None:
+            headers = "\r\n".join([f"{k}: {v}" for k,v in headers.items()]) + "\r\n"
+            cmd = ["ffmpeg", "-headers", headers, "-i", url, "-c", "copy", mp4_path]
+        else:
+            cmd = ["ffmpeg", "-i", url, "-c", "copy", mp4_path]
+        subprocess.run(cmd)
+
+    # extract audio
     options = [
         "-vn", # Disables video recording
         "-acodec", "libmp3lame", # Specifies MP3 encoding
         "-q:a", "0", # High quality audio
     ]
 
-    if headers is not None:
-        headers = "\r\n".join([f"{k}: {v}" for k,v in headers.items()]) + "\r\n"
-        cmd = ["ffmpeg", "-headers", headers, "-i", url, *options, output_path]
-    else:
-        cmd = ["ffmpeg", "-i", url, *options, output_path]
-
+    cmd = ["ffmpeg", "-i", mp4_path, *options, audio_path]
     subprocess.run(cmd)
+
+    # create hls
+    options = [
+        "-hls_time", "10", # segment duration
+        "-hls_list_size", "0", # list all segments
+        "-hls_segment_filename", f"{hls_path.with_suffix('')}_segment_%03d.ts",
+        "-f", "hls",
+    ]
+
+    cmd = ["ffmpeg", "-i", mp4_path, *options, hls_path]
+    subprocess.run(cmd)
+
+    # remove the mp4
+    mp4_path.unlink()
 
 def slugify(title):
     """
@@ -167,6 +189,7 @@ def process_debate(*, title, url, output_root):
 
     slug = slugify(title)
     audio_path = output_root / f"audio/{slug}.mp3"
+    hls_path = output_root / f"hls/{slug}.m3u8"
 
     if "rtp.pt" in url:
         headers = {
@@ -187,15 +210,13 @@ def process_debate(*, title, url, output_root):
     else:
         headers = None
 
-    get_audio(m3u8_url, audio_path, headers=headers)
+    get_audio_and_video(m3u8_url, audio_path, hls_path, headers=headers)
     transcribe_audio(audio_path, output_root)
 
     out = {
         "slug": slug,
         "title": title,
         "original_url": url,
-        "m3u8_url": m3u8_url,
-        "headers": headers,
     }
 
     with open(output_root / f"{slug}.json", "w") as f:
