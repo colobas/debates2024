@@ -20,10 +20,28 @@
     const response = await fetch(`/debates/transcriptions/${params.slug}.json`);
     transcripts = await response.json();
   }
+    
+  // Async function to assemble video
+  async function assembleVideo() {
+    const video = document.getElementById('video');
+    if (Hls.isSupported()) {
+      const hls = new Hls({
+        xhrSetup: function(xhr, url) {
+          // Apply headers from debateData to the request, only if they exist
+          if (debateData.headers) {
+            Object.keys(debateData.headers).forEach(header => {
+              xhr.setRequestHeader(header, debateData.headers[header]);
+            });
+          }
+        }
+      });
+      hls.loadSource(debateData.m3u8_url);
+      hls.attachMedia(video);
+    }
+  }
 
   onMount(async () => {
     await fetchDebateData();
-    await fetchTranscripts();
 
     const video = document.getElementById('video');
     if (Hls.isSupported()) {
@@ -67,6 +85,11 @@
 
 <a href={debateData.original_url} target="_blank">Link para o vídeo original</a>
 
-<ChatDisplay messages={transcripts} />
+{#await fetchTranscripts()}
+{:then}
+  <ChatDisplay messages={transcripts} />
+{:catch}
+  <p>Erro ao carregar transcrições</p>
+{/await}
 
 <a href="/">Voltar à página inicial</a>

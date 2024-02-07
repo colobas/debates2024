@@ -13,12 +13,14 @@
   };
 
   // Generating a unique color for each speaker
-  const speakerColors = {};
+  let speakerColors = {};
+
   messages.forEach((msg) => {
-    if (!speakerColors[msg.speaker]) {
-      speakerColors[msg.speaker] = `hsl(${Math.floor(Math.random() * 360)}, 70%, 60%)`;
-    }
+    speakerColors[msg.speaker] = `hsl(${Math.floor(Math.random() * 360)}, 70%, 60%)`;
   });
+
+  $: console.log(speakerColors);
+
 </script>
 
 <style>
@@ -42,11 +44,18 @@
   }
 </style>
 
+
 <div class="chat-container">
   {#each messages as { speaker, text }, index}
-    <div class="message {getSpeakerSide(index)}"
-         style="background-color: {speakerColors[speaker]};">
-      <strong>{speaker}:</strong> {text}
-    </div>
+    {#await speakerColors[speaker]}
+      <p>Loading...</p>
+    {:then color}
+      <div class="message {getSpeakerSide(index)}" style="background-color:{color};">
+        <strong>{speaker}:</strong> {text}
+      </div>
+    {:catch error}
+      <p>Error: {error.message}</p>
+    {/await}
   {/each}
 </div>
+
