@@ -1,10 +1,8 @@
 name: Process Debates
 
-#on:
-#  push:
-#    paths:
-#      - 'debates.yaml'
-#
+on:
+  workflow_dispatch:
+
 jobs:
   process-debates:
     defaults:
