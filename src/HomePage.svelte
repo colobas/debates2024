@@ -22,7 +22,9 @@
 <h1>Debates Legislativas 2024</h1>
 
 Aqui pode encontrar os vídeos dos debates para as eleições legislativas de 2024,
-bem como as respectivas transcrições (obtidas automáticamente, e por isso sujeitas a erros.
+bem como as respectivas transcrições <strong>(obtidas
+<a href="https://github.com/colobas/debates2024/blob/9d735da1b7c3542fb34d80c8ef7d35a61e2d0d3d/process_debates.py#L146-L176"automaticamente</a>,
+e por isso sujeitas a erros).</strong>
 
 Clique num vídeo para ver o debate completo.
 

@@ -9,7 +9,6 @@ dependencies:
   - ffmpeg=6.1.1
   - pip:
     - beautifulsoup4
-    - webvtt-to-json
     - git+https://github.com/m-bain/whisperx.git@8227807#egg=whisperx
     - torchaudio==2.0.0
-    - webvtt
+    - webvtt-py
