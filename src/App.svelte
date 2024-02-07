@@ -6,3 +6,5 @@
 
 <Router {routes} />
 
+
+<small><a href="https://github.com/colobas/debates2024">Contribui no GitHub</a></small>
