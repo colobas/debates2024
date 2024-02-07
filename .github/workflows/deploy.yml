@@ -13,7 +13,9 @@ jobs:
         node-version: '21.5.0'
     - run: npm install
     - run: npm run build
+    - run: echo "debates2024.info" > dist/CNAME
     - uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.DEPLOY_TOKEN }}
         publish_dir: ./dist
+
