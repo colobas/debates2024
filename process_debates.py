@@ -11,6 +11,15 @@ import re
 import webvtt
 
 
+def convert_to_seconds(time):
+    """
+    Convert a time in the format 00:00:01.216 to seconds
+    """
+
+    h, m, s = time.split(":")
+    return int(h) * 3600 + int(m) * 60 + float(s)
+
+
 def webvtt_to_json(vtt_path, output_path):
     # adapted from: https://github.com/simonw/webvtt-to-json/blob/main/webvtt_to_json/cli.py
     with open(vtt_path, "r") as vtt_file:
@@ -35,8 +44,8 @@ def webvtt_to_json(vtt_path, output_path):
     for d in dicts:
         line = "\n".join(d.pop("lines"))
         d["speaker"], d["text"] = [_.strip() for _ in line.split(":", 1)]
-        d["time"] = d.pop('end')
-        d.pop('start')
+        d["time"] = convert_to_seconds(d.pop('start'))
+        d.pop('end')
 
     with open(output_path, "w") as output:
         json.dump(dicts, output, indent=4, ensure_ascii=False)
@@ -175,6 +184,9 @@ def transcribe_audio(audio_path, output_root):
 
     # convert the vtt to json
     webvtt_to_json(f"{output_root}/transcriptions/{name}.vtt", f"{output_root}/transcriptions/{name}.json")
+
+    # remove the vtt
+    (output_root / f"transcriptions/{name}.vtt").unlink()
 
 
 def process_debate(*, title, url, output_root):
