@@ -25,39 +25,17 @@
   async function assembleVideo() {
     const video = document.getElementById('video');
     if (Hls.isSupported()) {
-      const hls = new Hls({
-        xhrSetup: function(xhr, url) {
-          // Apply headers from debateData to the request, only if they exist
-          if (debateData.headers) {
-            Object.keys(debateData.headers).forEach(header => {
-              xhr.setRequestHeader(header, debateData.headers[header]);
-            });
-          }
-        }
-      });
-      hls.loadSource(debateData.m3u8_url);
+      const hls = new Hls();
+      hls.loadSource(`/debates/hls/${params.slug}.m3u8`);
       hls.attachMedia(video);
+    } else {
+      video.src = `/debates/hls/${params.slug}.m3u8`;
     }
   }
 
   onMount(async () => {
     await fetchDebateData();
-
-    const video = document.getElementById('video');
-    if (Hls.isSupported()) {
-      const hls = new Hls({
-        xhrSetup: function(xhr, url) {
-          // Apply headers from debateData to the request, only if they exist
-          if (debateData.headers) {
-            Object.keys(debateData.headers).forEach(header => {
-              xhr.setRequestHeader(header, debateData.headers[header]);
-            });
-          }
-        }
-      });
-      hls.loadSource(debateData.m3u8_url);
-      hls.attachMedia(video);
-    }
+    await assembleVideo();
   });
 </script>
 
