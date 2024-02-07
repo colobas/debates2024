@@ -150,7 +150,7 @@ def transcribe_audio(audio_path, output_root):
 
     name = audio_path.stem
 
-    if not (output_root / f"transcriptions/{name}.vtt").exists():
+    if not (output_root / f"transcriptions/{name}.json").exists():
         Path(f"{output_root}/transcriptions").mkdir(exist_ok=True, parents=True)
 
         cmd = [
@@ -177,16 +177,16 @@ def transcribe_audio(audio_path, output_root):
 
         subprocess.run(cmd)
 
-    # keep only the .vtt file
-    for f in Path(f"{output_root}/transcriptions").glob(f"{name}.*"):
-        if f.suffix not in [".vtt"]:
-            f.unlink()
+        # keep only the .vtt file
+        for f in Path(f"{output_root}/transcriptions").glob(f"{name}.*"):
+            if f.suffix not in [".vtt"]:
+                f.unlink()
 
-    # convert the vtt to json
-    webvtt_to_json(f"{output_root}/transcriptions/{name}.vtt", f"{output_root}/transcriptions/{name}.json")
+        # convert the vtt to json
+        webvtt_to_json(f"{output_root}/transcriptions/{name}.vtt", f"{output_root}/transcriptions/{name}.json")
 
-    # remove the vtt
-    (output_root / f"transcriptions/{name}.vtt").unlink()
+        # remove the vtt
+        (output_root / f"transcriptions/{name}.vtt").unlink()
 
 
 def process_debate(*, title, url, output_root):
