@@ -150,3 +150,4 @@
 
 <a href="/">Voltar à página inicial</a>
 <a href={debateData.original_url} target="_blank">Link para o vídeo original</a>
+<a href="/debates/audio/{params.slug}.mp3" download={debateData.title}>Link para o áudio</a>
