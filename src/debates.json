@@ -23,5 +23,15 @@
         "title": "Chega vs IL",
         "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12899/p12899_1_20240206000000e002t5554.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
         "slug": "chega-vs-il"
+    },
+    {
+        "title": "BE vs Livre",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12899/p12899_1_20240208000000e003t9758.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "be-vs-livre"
+    },
+    {
+        "title": "Livre vs IL",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12901/p12901_1_20240207000000e002t8819.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "livre-vs-il"
     }
 ]
