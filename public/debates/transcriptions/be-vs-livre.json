@@ -11,7 +11,7 @@
     },
     {
         "speaker": "Moderadora",
-        "text": "O surteio, ditou que comece Mariana Mortágua e termina Rui Tavares.",
+        "text": "O sorteio ditou que comece Mariana Mortágua e termine Rui Tavares.",
         "time": 17.445
     },
     {
@@ -26,12 +26,12 @@
     },
     {
         "speaker": "Moderadora",
-        "text": "O tempo levantou várias dúvidas e a Mariana Mortágua chegou a ser acusada de ser mentirosa.",
+        "text": "O tema levantou várias dúvidas e a Mariana Mortágua chegou a ser acusada de ser mentirosa.",
         "time": 33.782
     },
     {
         "speaker": "Moderadora",
-        "text": "Queres esclarecer exatamente o que é que aconteceu?",
+        "text": "Quer esclarecer exatamente o que é que aconteceu?",
         "time": 39.126
     },
     {
@@ -76,17 +76,17 @@
     },
     {
         "speaker": "Moderadora",
-        "text": "Mas queres perguntar-nos o que é que aconteceu efetivamente com a sua avó?",
+        "text": "Mas quer esclarecer-nos o que é que aconteceu efetivamente com a sua avó?",
         "time": 90.814
     },
     {
         "speaker": "Mariana Mortágua",
         "text": "Mesmo o regime de salvaguarda que foi instituído era um regime que tinha um prazo de 5 anos.",
-        "time": 93.63499999999999
+        "time": 93.635
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Imaginamos a crueldade de dizer a um idoso com 70 que só está protegido até aos 75 ou que aos 75 só está protegido até aos 80.",
+        "text": "Imaginemos a crueldade de dizer a um idoso com 70 que só está protegido até aos 75, ou que aos 75 só está protegido até aos 80.",
         "time": 99.179
     },
     {
@@ -96,22 +96,22 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "ficassem em supersalto, porque não sabiam o que ia acontecer, porque sentiram que se não estivessem acima do acontecimento, se não tivessem informação, tudo poderia acontecer e que estariam desprodugidos.",
-        "time": 115.09100000000001
+        "text": "ficassem em sobressalto, porque não sabiam o que ia acontecer, porque sentiram que se não estivessem em cima do acontecimento, se não tivessem informação, tudo poderia acontecer e que estariam desprodugidos.",
+        "time": 115.091
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "A minha avó sentiu esse supersalto e acho que não foi a única.",
+        "text": "A minha avó sentiu esse sobressalto e acho que não foi a única.",
         "time": 124.495
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Muitas avós e muitos avós que tinham contratos de arrendimento central.",
+        "text": "Muitas avós e muitos avós que tinham contratos de arrendimento o sentiram.",
         "time": 127.596
     },
     {
-        "speaker": "Mariana Mortágua",
-        "text": "Mas a sua avó cumpriu os requisitos à data para ser expulsa?",
+        "speaker": "Moderadora",
+        "text": "Mas a sua avó cumpria os requisitos à data para ser expulsa?",
         "time": 131.158
     },
     {
@@ -121,7 +121,7 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "meramente temporário, criou um regime de insegurança e de supressalto em todos os idosos, não só nos idosos, mas particularmente nos idosos, que a partir do momento em que recebiam uma carta de senhorio ficavam em supressalto, sem saber o que lhes podia acontecer.",
+        "text": "meramente temporário, criou um regime de insegurança e de sobressalto em todos os idosos (não só nos idosos, mas particularmente nos idosos) que a partir do momento em que recebiam uma carta de senhorio ficavam em sobressalto, sem saber o que lhes podia acontecer.",
         "time": 153.067
     },
     {
@@ -131,13 +131,13 @@
     },
     {
         "speaker": "Moderadora",
-        "text": "se a sua avó efetivamente cumpria esses requisitos à luz do novo regime de arrendamento urbano do ano de 2012.",
+        "text": "Mas acabou por não me responder, se a sua avó efetivamente cumpria esses requisitos à luz do novo regime de arrendamento urbano do ano de 2012.",
         "time": 173.148
     },
     {
         "speaker": "Mariana Mortágua",
         "text": "Não faz muito sentido discutir as questões particulares, eu acho que o que eu disse e mantenho é que cada idoso terá tido a sua situação particular, todos eles situações diferentes, mas há uma coisa comum entre todos os casos, que é o sobressalto e o medo daquilo que ia acontecer.",
-        "time": 179.85399999999998
+        "time": 179.854
     },
     {
         "speaker": "Mariana Mortágua",
@@ -162,7 +162,7 @@
     {
         "speaker": "Rui Tavares",
         "text": "Boa tarde, boa tarde também aos telespectadores da SIC e boa tarde à Mariana Mortágua, apesar de eu estar um bocadinho chateado com a Mariana porque depois do debate que ela fez com o Luís Montenegro, agora o Luís Montenegro não quer debater comigo e não quer debater com o Paulo Raimundo e portanto foi eficácia mas foi pouca camaradagem porque podias ter deixado um bocadinho para nós.",
-        "time": 219.79500000000002
+        "time": 219.795
     },
     {
         "speaker": "Rui Tavares",
@@ -171,7 +171,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "O livro não foi informado, a não ser por perguntas de jornalistas, portanto o PSD não teve a cortesia, a AD, quem quer que seja, alguém, um dos três líderes da coligação, a cortesia de falar diretamente, não sei se com o PCP, com a CDU, mas não com o livro certamente.",
+        "text": "O LIVRE não foi informado, a não ser por perguntas de jornalistas, portanto o PSD não teve a cortesia (a AD, quem quer que seja — alguém — um dos três líderes da coligação) a cortesia de falar diretamente, não sei se com o PCP, com a CDU, mas não com o LIVRE certamente.",
         "time": 242.505
     },
     {
@@ -221,7 +221,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Luís Montenegro.",
+        "text": "Luís Montenegro",
         "time": 317.126
     },
     {
@@ -241,7 +241,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "E isto é muito grave com o Luís Montenegro, porque ele ao mesmo tempo está-nos a dizer que um não é um não, que o seu não ao chega é mesmo um não.",
+        "text": "E isto é muito grave com o Luís Montenegro, porque ele ao mesmo tempo está-nos a dizer que um não é um não, que o seu não ao Chega é mesmo um não.",
         "time": 339.744
     },
     {
@@ -256,7 +256,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "corra mal é sempre melhor do que um debate ao qual não se foi e devo dizer que lá estarei, frente a Nuno Melo, frente a Gonçalo da Câmara Pereira, se quiserem enviar também, mas espero que Luís Montenegro não cometa esse erro de não comparecer ao debate.",
+        "text": "que corra mal é sempre melhor do que um debate ao qual não se foi. E devo dizer que lá estarei, frente a Nuno Melo, frente a Gonçalo da Câmara Pereira, se quiserem enviar também, mas espero que Luís Montenegro não cometa esse erro de não comparecer ao debate.",
         "time": 355.151
     },
     {
@@ -271,7 +271,7 @@
     },
     {
         "speaker": "Moderadora",
-        "text": "A minha pergunta, começando pela Mariana, é o que é que verdadeiramente vos distingue, Mariana Mortágua?",
+        "text": "A minha pergunta, e começando pela Mariana, é: o que é que verdadeiramente vos distingue, Mariana Mortágua?",
         "time": 385.326
     },
     {
@@ -281,7 +281,7 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Eu acho que o Bloco e o Livro têm objetivos comuns.",
+        "text": "Eu acho que o Bloco e o LIVRE têm objetivos comuns.",
         "time": 397.43
     },
     {
@@ -331,17 +331,17 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "O Rui fez-me uma acusação de demagogia nacionalista, de abrir as portas à demagogia nacionalista.",
+        "text": "Na altura, o Rui fez-me uma acusação de demagogia nacionalista, de abrir as portas à demagogia nacionalista.",
         "time": 475.771
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Eu acho que essa acusação não faz sentido, porque esta é, na verdade, a única proposta que consegue impedir essa procura ilimitada de milionários sobre o mercado da habitação que está a fazer subir",
+        "text": "Eu acho que essa acusação não faz sentido, porque esta é, na verdade, a única proposta que consegue impedir essa procura ilimitada de milionários sobre o mercado da habitação que está a fazer subir os preços",
         "time": 482.414
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "os preços, como diz o Banco de Portugal, que os preços em média são 95% superiores entre as ações não residentes, ou como o INE diz no último boletim.",
+        "text": "como diz o Banco de Portugal, que os preços em média são 95% superiores em transações de não residentes, ou como o INE diz no último boletim.",
         "time": 494.82
     },
     {
@@ -351,7 +351,7 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "muito difícil que as outras medidas façam sentido, porque há sempre uma procura ilimitada por casas e por construção de luxo e por mercado de luxo que está a inflacionar o preço das casas.",
+        "text": "é muito difícil que as outras medidas façam sentido, porque há sempre uma procura ilimitada por casas e por construção de luxo e por mercado de luxo que está a inflacionar o preço das casas.",
         "time": 516.741
     },
     {
@@ -371,7 +371,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Acho que se estivéssemos a disputar eleitorado, acolhemos todos os partidos, acolhem todos os votos que venham, venham de onde venham.",
+        "text": "Acho que se estivéssemos a disputar eleitorado, acolhemos — todos os partidos acolhem todos os votos que venham, venham de onde venham.",
         "time": 549.379
     },
     {
@@ -396,12 +396,12 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "E, portanto, aqui acho que há para uma governação, que seja de progresso e de ecologia, que tenha um programa mais congruente e coerente do que tem o da direita, porque nós, na verdade, entre o que o Chega diz sobre, enfim, o que quer que seja que o Chega tenha que dizer naquele momento para atingir o poder, que é a única coisa que lhes interessa.",
+        "text": "E, portanto, aqui acho que há [espaço?] para uma governação, que seja de progresso e de ecologia, que tenha um programa mais congruente e coerente do que tem o da direita. Porque, na verdade, entre o que o Chega diz sobre —enfim, o que quer que seja que o Chega tenha que dizer naquele momento para atingir o poder, que é a única coisa que lhes interessa—",
         "time": 589.938
     },
     {
         "speaker": "Rui Tavares",
-        "text": "E o que a iniciativa liberal diz nas suas opções ideológicas e depois o PSD, não há congruência nenhuma.",
+        "text": "e o que a Iniciativa Liberal diz nas suas opções ideológicas, e depois o PSD, não há congruência nenhuma.",
         "time": 612.029
     },
     {
@@ -411,7 +411,7 @@
     },
     {
         "speaker": "Moderadora",
-        "text": "Não convém assinalar as vossas divergências porque algumas existem.",
+        "text": "Ou seja, nesta altura, Rui Tavares, não convém assinalar as vossas divergências porque algumas existem.",
         "time": 618.957
     },
     {
@@ -421,7 +421,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Agora, claro que há diferenças em relação a temas que são bem conhecidos, a Europa é um deles.",
+        "text": "Agora, claro que há diferenças em relação a temas que são bem conhecidos — a Europa é um deles.",
         "time": 626.906
     },
     {
@@ -446,7 +446,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Porquê que o LIVRE acredita que uma abordagem proibicionista não é a melhor?",
+        "text": "Porque é que o LIVRE acredita que uma abordagem proibicionista não é a melhor?",
         "time": 652.199
     },
     {
@@ -461,18 +461,18 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Mas acontece que se a iniciativa liberal, aqui há uns anos falava de 100 mil e agora fala de 250 mil casas, isto é 0,01% do mercado que num instante",
+        "text": "Mas acontece que se a Iniciativa Liberal, aqui há uns anos falava de 100 mil e agora fala de 250 mil casas, isto é 0,01% do mercado que num instante",
         "time": 672.287
     },
     {
         "speaker": "Rui Tavares",
-        "text": "A barbataria é essas casas em Portugal, comprando-as ainda por cima, a 2 milhões de euros, 3 milhões de euros.",
+        "text": "arrebataria essas casas em Portugal, comprando-as ainda por cima, a 2 milhões de euros, 3 milhões de euros.",
         "time": 681.13
     },
     {
         "speaker": "Rui Tavares",
         "text": "Começa a ser banal isto.",
-        "time": 686.7139999999999
+        "time": 686.714
     },
     {
         "speaker": "Rui Tavares",
@@ -486,7 +486,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "É verdade que a Dinamarca o faz, mas a Dinamarca tem derrugações especiais porque não faz parte do espaço de liberdade, segurança e justiça da União Europeia.",
+        "text": "É verdade que a Dinamarca o faz, mas a Dinamarca tem derrogações especiais porque não faz parte do espaço de liberdade, segurança e justiça da União Europeia.",
         "time": 703.5
     },
     {
@@ -496,16 +496,16 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Mas também é verdade que acho que há aqui um erro político, não use essa expressão de demagogia nacionalista, isso usei em relação ao Chega porque, claro, aproveitou para cavalgar a onda de dizer que, bem, para alguma coisa vocês querem fechar as portas.",
+        "text": "Mas também é verdade que acho que há aqui um erro político — não uso essa expressão de demagogia nacionalista, isso usei em relação ao Chega porque, claro, aproveitou para cavalgar a onda de dizer que, bem, para alguma coisa vocês querem fechar as portas.",
         "time": 714.694
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Como é que o livro propõe ajudar a resolver este problema que se está a agravar e achamos que se fizermos o que nós propomos quanto antes ainda o podemos resolver a tempo?",
+        "text": "Como é que o LIVRE propõe ajudar a resolver este problema que se está a agravar? E achamos que se fizermos o que nós propomos quanto antes ainda o podemos resolver a tempo.",
         "time": 727.764
     },
     {
-        "speaker": "Rui Tavares",
+        "speaker": "Moderadora",
         "text": "E que é uma proposta diferente da do Bloco.",
         "time": 737.426
     },
@@ -516,12 +516,12 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "É de ter uma sobretaxa do IMT sobre prédios de luxo e que essa sobretaxa que este mercado pode muito bem pagar sirva para um fundo de emergência na habitação para fomentar o mercado nos segmentos classe média baixa e jovens.",
+        "text": "É de ter uma sobretaxa do IMT sobre prédios de luxo e que essa sobretaxa, que este mercado pode muito bem pagar, sirva para um fundo de emergência na habitação para fomentar o mercado nos segmentos classe média baixa e jovens.",
         "time": 741.028
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Isto é, se chama em linguagem técnica, um imposto pigoviano, ou seja,",
+        "text": "Isto é o que se chama, em linguagem técnica, um imposto pigoviano, ou seja,",
         "time": 755.458
     },
     {
@@ -531,12 +531,12 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Não é ilegítimo uma pessoa querer viver em Portugal, não é ilegítimo que Portugal seja atrativo para estas pessoas, mas nós podemos aumentar os impostos de forma a que seja menos atrativo e que se este",
+        "text": "Não é ilegítimo uma pessoa querer viver em Portugal, não é ilegítimo que Portugal seja atrativo para estas pessoas, mas nós podemos aumentar os impostos de forma a que seja menos atrativo",
         "time": 765.226
     },
     {
         "speaker": "Rui Tavares",
-        "text": "mercado que parece ser tão insensível ao preço, continua a comprar, mesmo com uma sobretaxa no IMT, ao menos isso serve para ajudarmos quem neste momento está sob a pressão de perder as suas casas.",
+        "text": "e que se este mercado, que parece ser tão insensível ao preço, continua a comprar, mesmo com uma sobretaxa no IMT, ao menos isso serve para ajudarmos quem neste momento está sob a pressão de perder as suas casas.",
         "time": 776.756
     },
     {
@@ -561,27 +561,37 @@
     },
     {
         "speaker": "Moderadora",
-        "text": "Porquê que o Bloco de Esquerda insiste numa taxa que... Uma proibição, na verdade.",
+        "text": "Porque é que o Bloco de Esquerda insiste numa taxa que...",
         "time": 798.991
     },
     {
-        "speaker": "Moderadora",
+        "speaker": "Mariana Mortágua",
+        "text": "Uma proibição, na verdade.",
+        "time": 804.000
+    },
+    {
+        "speaker": "Rui Tavares",
         "text": "Uma proibição.",
         "time": 805.235
     },
     {
         "speaker": "Moderadora",
-        "text": "que o Rui Tavares diz que é ilegal no ponto de vista do Direito Europeu?",
-        "time": 806.5360000000001
+        "text": "...uma proibição que o Rui Tavares diz que é ilegal no ponto de vista do Direito Europeu?",
+        "time": 806.536
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Na verdade acho que o Rui acaba por dar a resposta à própria questão que coloca a países da União Europeia que têm esta medida.",
+        "text": "Na verdade acho que o Rui acaba por dar a resposta à própria questão que coloca: há países da União Europeia que têm esta medida.",
         "time": 811.101
     },
     {
+        "speaker": "Rui Tavares",
+        "text": "Mas é preciso mudar os tratados.",
+        "time": 818.000
+    },
+    {
         "speaker": "Mariana Mortágua",
-        "text": "Malta e Dinamarca têm interrogações para esta medida e é óbvio que quando estamos perante uma crise destas dimensões há",
+        "text": "Malta e Dinamarca têm derrogações para esta medida e é óbvio que quando estamos perante uma crise destas dimensões,",
         "time": 819.25
     },
     {
@@ -591,12 +601,12 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Ontem no debate ouvi o Rui a falar sobre esta sobretaxa em MT, percebi até que seria uma sobretaxa para quem nunca tinha investido em Portugal e portanto uma sobretaxa para não-residentes, o que em si colocaria à mesma questão de uma medida para não-residentes e não só para residentes, mas o meu principal problema com essa sobretaxa nem é",
-        "time": 833.5409999999999
+        "text": "Ontem no debate ouvi o Rui a falar sobre esta sobretaxa em IMT, percebi até que seria uma sobretaxa para quem nunca tinha investido em Portugal, e portanto uma sobretaxa para não-residentes —o que em si colocaria a mesma questão de uma medida para não-residentes e não só para residentes—, mas o meu principal problema com essa sobretaxa",
+        "time": 833.541
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "que ela acabe por fazer uma distinção entre residentes e não-residentes porque eu acho que é essencial fazê-lo e é por isso que proponho que seja proibida a venda de casas para quem não quer viver nas casas, portanto para não-residentes.",
+        "text": "nem é que ela acabe por fazer uma distinção entre residentes e não-residentes — porque eu acho que é essencial fazê-lo, e é por isso que proponho que seja proibida a venda de casas para quem não quer viver nas casas, portanto para não-residentes.",
         "time": 853.789
     },
     {
@@ -621,22 +631,22 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "E depois há uma outra questão, que é o efeito perverso da receita de MT.",
+        "text": "E depois há uma outra questão, que é o efeito perverso da receita de IMT.",
         "time": 886.343
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "A receita de MT é uma receita municipal que vai diretamente para o município que tem as casas mais caras, portanto cria um isentivo perverso às casas mais caras, é por isso que o Bloco defende um fundo que mutualiza esta receita, acabando com a ligação direta entre quem recebe a receita e quem tem interesse em que as casas sejam mais caras, mas também porque a receita de MT subiu muito",
-        "time": 890.4639999999999
+        "text": "A receita de IMT é uma receita municipal, que vai diretamente para o município que tem as casas mais caras, portanto cria um incentivo perverso às casas mais caras —é por isso que o Bloco defende um fundo que mutualiza esta receita, acabando com a ligação direta entre quem recebe a receita e quem tem interesse em que as casas sejam mais caras— mas também porque a receita de IMT subiu muito",
+        "time": 890.464
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "A receita de EMT subiu 73% nos últimos dois anos.",
+        "text": "A receita de IMT subiu 73% nos últimos dois anos.",
         "time": 911.81
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Nós não temos um problema de receita de EMT, ela tem subido muito, passou de 392 milhões de euros em 2012 para 1.700 milhões em 2022.",
+        "text": "Nós não temos um problema de receita de IMT, ela tem subido muito, passou de 392 milhões de euros em 2012 para 1.700 milhões em 2022.",
         "time": 914.652
     },
     {
@@ -646,17 +656,17 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "não resolve o problema do acesso do multimilionário ao mercado de luxo, como cria um incentivo perverso entre os municípios que têm casas mais caras e mais receita de MT, como na verdade a receita de MT já é gigantesca para a natureza do seu imposto e os ganhos que nós temos de limitar a procura milionária são a única forma até de podermos ter outras limitações no mercado como nós queremos, porque o Rui também defende isso,",
+        "text": "não resolve o problema do acesso do multimilionário ao mercado de luxo, como cria um incentivo perverso entre os municípios que têm casas mais caras e mais receita de IMT, como na verdade a receita de IMT já é gigantesca para a natureza do seu imposto, e os ganhos que nós temos de limitar a procura milionária são a única forma até de podermos ter outras limitações no mercado como nós queremos, porque o Rui também defende isso, o LIVRE também defende isso, nomeadamente limites às rendas",
         "time": 927.8
     },
     {
         "speaker": "Moderadora",
-        "text": "Vamos passar a outro tema, temos de falar de jovens e de esperança, ou da falta dela, a Rui Tavares.",
+        "text": "Vamos passar a outro tema, temos de falar de jovens e de esperança, ou da falta dela.",
         "time": 955.063
     },
     {
         "speaker": "Moderadora",
-        "text": "Portugal tem hoje a taxa de imigração mais alta da Europa e uma das maiores do mundo.",
+        "text": "Rui Tavares: Portugal tem hoje a taxa de imigração mais alta da Europa e uma das maiores do mundo.",
         "time": 961.185
     },
     {
@@ -676,12 +686,18 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Muito rapidamente, em relação ao tema anterior, só dizer que essa receita deve ser consignada a um Fundo de Emergência na Habitação, que já existe, porque o livro propôs, neste orçamento para 2024, e desde o dia 1 de janeiro que... Temos de avançar, Rui, só porque senão ficamos praticamente sem tempo para irmos a outros temas importantes.",
+        "text": "Muito rapidamente, em relação ao tema anterior, só dizer que essa receita deve ser consignada a um Fundo de Emergência na Habitação, que já existe, porque o LIVRE o propôs, neste orçamento para 2024, e desde o dia 1 de janeiro que...",
         "time": 990.327
     },
     {
+        "speaker": "Moderadora",
+        "text": "Temos de avançar, Rui, só porque senão ficamos praticamente sem tempo para irmos a outros temas importantes.",
+        "time": 1000.000
+    },
+
+    {
         "speaker": "Rui Tavares",
-        "text": "mas 25% do imposto de selo sobre todas as ações imobiliárias vai para o assunto da emergência na habitação, no nosso cálculo são 100 milhões por ano, servem para reforçar a Estratégia Nacional de Integração das Pessoas sem Abrigo, mas as câmaras municipais, e assim através do IMT, podem usar, por exemplo, para combater a descaracterização dos bairros.",
+        "text": "...que, não o IMT, mas 25% do imposto de selo sobre transações imobiliárias vai para esse Fundo de Emergência na Habitação, nos nossos cálculos são 100 milhões por ano, servem para reforçar a Estratégia Nacional de Integração das Pessoas sem Abrigo, mas as câmaras municipais, e aí sim através do IMT, podem usar, por exemplo, para combater a descaracterização dos bairros.",
         "time": 1007.509
     },
     {
@@ -701,7 +717,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "O que nós sabemos é que os jovens que saem de Portugal saem menos do que saíram no tempo da Troika.",
+        "text": "O que nós sabemos é que os jovens que saem de Portugal — e eles saem menos do que saíram no tempo da Troika.",
         "time": 1047.364
     },
     {
@@ -710,18 +726,23 @@
         "time": 1052.349
     },
     {
+        "speaker": "Mariana Mortágua",
+        "text": "Metade.",
+        "time": 1055.349
+    },
+    {
         "speaker": "Moderadora",
         "text": "Ainda que neste último ano batemos o número recorde, em 2023.",
         "time": 1056.333
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Saiam muito mais do tempo da Troika.",
+        "text": "Saiam muito mais durante o tempo da Troika.",
         "time": 1059.276
     },
     {
         "speaker": "Rui Tavares",
-        "text": "A emigração portuguesa, e-emigração e re-emigração, já tinha estado lá fora, que voltou, às vezes aposentada e que depois voltou a sair, no tempo da Troika teve, quer dizer, a níveis que só comparáveis com os do tempo da Guerra Mundial.",
+        "text": "A emigração portuguesa, emigração e re-emigração, gente que já tinha estado lá fora, que voltou, às vezes aposentada, e que depois voltou a sair, no tempo da Troika teve, quer dizer, a níveis que só comparáveis com os do tempo da guerra colonial.",
         "time": 1064.42
     },
     {
@@ -761,7 +782,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "do qual nós somos adeptos e que permita aos jovens que não tenham que esperar porque os políticos do nosso país venham paulatinamente a fazer convergir o país com a média da União Europeia.",
+        "text": "do qual nós somos adeptos e que permite aos jovens que não tenham que esperar por que os políticos do nosso país venham paulatinamente a fazer convergir o país com a média da União Europeia.",
         "time": 1099.833
     },
     {
@@ -771,33 +792,38 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Portanto, Portugal tem que sair do paradigma em que jogar para o empate era bom, da anterior geração de políticos em Portugal, e temos que passar nesta nova geração que existe hoje em dia para um paradigma no qual Portugal pode estar na vanguarda da União Europeia",
+        "text": "E portanto, Portugal tem que sair do paradigma em que jogar para o empate era bom, da anterior geração de políticos em Portugal, e temos que passar, nesta nova geração que existe hoje em dia, para um paradigma no qual Portugal pode estar na vanguarda da União Europeia.",
         "time": 1115.666
     },
     {
         "speaker": "Rui Tavares",
-        "text": "em vários setores, são na transição energética, na ecologia, na defesa da biodiversidade, no restauro da natureza, na educação, na ciência, na construção em Portugal daquilo que pode ser uma plataforma para uma elite de serviço europeia e atlântica que se impaga bem, salários mais altos, mas não só, pessoas vão à procura de",
+        "text": "Em vários setores, são na transição energética, na ecologia, na defesa da biodiversidade, no restauro da natureza, na educação, na ciência, na construção em Portugal daquilo que pode ser uma plataforma para uma elite de serviço europeia e atlântica que sim, paga bem, salários mais altos, mas não só, as pessoas vão à procura de",
         "time": 1129.136
     },
     {
         "speaker": "Rui Tavares",
-        "text": "qualidade de vida e, portanto, excelentes serviços públicos.",
+        "text": "qualidade de vida e, portanto, excelentes serviços públicos",
         "time": 1146.081
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Acho que à esquerda estamos de acordo que não devemos recuar um milímetro no Estado Social e devemos inovar no Estado Social.",
+        "text": "(acho que à esquerda estamos de acordo que não devemos recuar um milímetro no Estado Social e devemos inovar no Estado Social,",
         "time": 1148.662
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Espero que venhamos a falar disso.",
+        "text": "e espero que venhamos a falar disso)",
         "time": 1154.345
     },
     {
         "speaker": "Rui Tavares",
-        "text": "E vão à procura de uma coisa também, sair da ansiedade, da angústia permanente em que os seus pais viveram e os jovens vivem quando estão em Portugal, com o fim do mês, com a privação material, ou seja, com um objectivo que tem de voltar... Portanto, para o Livre em Concreto, a preocupação não é tanto o crescimento em si da economia, mas é tudo o restável.",
+        "text": "e vão à procura de uma coisa também: sair da ansiedade, da angústia permanente em que os seus pais viveram e os jovens vivem quando estão em Portugal, com o fim do mês, com a privação material, ou seja, com um objectivo que tem de voltar...",
         "time": 1155.766
+    },
+    {
+        "speaker": "Moderadora",
+        "text": "Portanto, para o LIVRE em concreto, a preocupação não é tanto o crescimento em si da economia, mas é tudo o que está à volta.",
+        "time": 1158.000
     },
     {
         "speaker": "Rui Tavares",
@@ -811,7 +837,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Esse é o grande desígnio de Portugal.",
+        "text": "Esse é o grande desígnio de Portugal desde o 25 de Abril.",
         "time": 1176.762
     },
     {
@@ -821,7 +847,7 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Enfim, se essa é a pergunta para todo... Deixo ficar aqui o programa eleitoral do Globo.",
+        "text": "Enfim, essa é a pergunta para todo... Deixo ficar aqui o programa eleitoral do Bloco, que é a resposta.",
         "time": 1184.574
     },
     {
@@ -836,8 +862,13 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "A direita acha que se diminui o IRCI, a economia cresce e, portanto, está sempre isenta de ter um debate sério sobre quais são as prioridades, que setores é que se desenvolvem, como é que se aumenta salários... E aí que eu estou já a colocar essa questão a dois representantes da esquerda.",
+        "text": "A direita acha que se diminui o IRC, e a economia cresce e, portanto, está sempre isenta de ter um debate sério sobre quais são as prioridades, que setores é que se desenvolvem, como é que se aumenta salários...",
         "time": 1199.059
+    },
+    {
+        "speaker": "Moderadora",
+        "text": "Daí que eu esteja a colocar essa questão a dois representantes da esquerda.",
+        "time": 1205.000
     },
     {
         "speaker": "Mariana Mortágua",
@@ -846,7 +877,7 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Complementar uma coisa que o Rui dizia com toda a razão, durante os quatro anos da Troika, na verdade saíram mais de 100 mil pessoas do país, em 2022 eram 60 mil, sai demasiada gente do país, só enfermeiros no último ano, mais de um milhar, pôs pedidos, 1.700 fizeram pedidos para sair do país, o que quer dizer que Portugal é incapaz de reter gente qualificada e gente que faz falta ao SNS e aos serviços públicos.",
+        "text": "Eu só quero complementar uma coisa que o Rui dizia com toda a razão: durante os quatro anos da Troika, na verdade saíram mais de 100 mil pessoas do país, em 2022 eram 60 mil. Sai demasiada gente do país, só enfermeiros no último ano, mais de um milhar, 1.700 fizeram pedidos para sair do país, o que quer dizer que Portugal é incapaz de reter gente qualificada e gente que faz falta ao SNS e aos serviços públicos.",
         "time": 1212.964
     },
     {
@@ -866,12 +897,12 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "O salário mínimo sim e temos uma convergência sobre o valor até e o percurso para o aumento do salário mínimo.",
+        "text": "O salário mínimo sim, e temos uma convergência sobre o valor até, e o percurso para o aumento do salário mínimo.",
         "time": 1246.835
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "A partir daí é preciso um trabalho de combate à precariedade, de reforço da contratação coletiva, de combate à exploração, por exemplo, de um trabalho por turnos.",
+        "text": "A partir daí é preciso um trabalho de combate à precariedade, de reforço da contratação coletiva, de combate à exploração, por exemplo, do trabalho por turnos.",
         "time": 1252.921
     },
     {
@@ -881,7 +912,7 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Quanto mais precariedade há, quanto mais competição corrida para o fundo há, mais difícil é subir salários e isso explica porque é que hoje os jovens têm um salário de mil euros.",
+        "text": "Quanto mais precariedade há, quanto mais competição, corrida para o fundo há, mais difícil é subir salários, e isso explica porque é que hoje os jovens têm um salário de mil euros.",
         "time": 1264.61
     },
     {
@@ -896,22 +927,22 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Alguém com mil euros que paga uma renda de novecentos,",
+        "text": "Alguém com mil euros que pague uma renda de novecentos,",
         "time": 1279.938
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "não consegue ficar no país e, portanto, falamos de salários, falamos de habitação, falamos de investimento em áreas cruciais e de política social direcionada e capaz de resolver o problema da pobreza, como os apoios sociais, aliás, também convergentes.",
+        "text": "não consegue ficar no país. E, portanto, falamos de salários, falamos de habitação, falamos de investimento em áreas cruciais e de política social direcionada e capaz de resolver o problema da pobreza, como os apoios sociais, aliás, também convergentes.",
         "time": 1283.28
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "E aqui entramos a mais uma medida que, neste caso um desacordo, porque já ontem no debate isto foi trazido e o LIVRE tem no seu programa um projeto piloto com vista à implementação faseada do rendimento básico incondicional.",
+        "text": "E aqui entramos em mais uma medida que —neste caso um desacordo— porque já ontem no debate isto foi trazido, e o LIVRE tem no seu programa um projeto piloto com vista à implementação faseada do rendimento básico incondicional.",
         "time": 1301.832
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Este terrenhamento básico incondicional, como nós sabemos, ele tem duas características, ele é universal e ele é incondicional.",
+        "text": "Este rendimento básico incondicional, como nós sabemos, ele tem duas características: ele é universal e ele é incondicional.",
         "time": 1321.107
     },
     {
@@ -921,7 +952,7 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Ora, a implementação do RBI para ser universal como o seu próprio conceito e nome existe, mesmo que se fosse uma prestação de 200 euros por pessoa e para ser universal, estaremos a falar de 28 mil milhões de euros, que é mais do que são as contribuições para a segurança social ou a política social.",
+        "text": "Ora, a implementação do RBI para ser universal como o seu próprio conceito e nome existe, mesmo que se fosse uma prestação de 200 euros por pessoa, e para ser universal, estaremos a falar de 28 mil milhões de euros, que é mais do que são as contribuições para a segurança social ou a política social.",
         "time": 1335.298
     },
     {
@@ -936,7 +967,7 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "É um projeto-piloto com vista à implementação.",
+        "text": "Mas é um projeto-piloto com vista à implementação.",
         "time": 1367.316
     },
     {
@@ -946,21 +977,21 @@
     },
     {
         "speaker": "Moderadora",
-        "text": "Vamos passar ao Rei Tavares para responder.",
+        "text": "Vamos passar ao Rui Tavares para responder.",
         "time": 1375.244
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "E por ir fazendo que tem custos que são incomportáveis com o estado social.",
+        "text": "E para ir fazendo tem custos que são incomportáveis com o estado social.",
         "time": 1376.746
     },
     {
         "speaker": "Moderadora",
-        "text": "Eu à pouco disse que o ano passado, 2023, tinha sido o ano de recorde e na verdade queria ter dito 2013, fica essa a minha correção.",
+        "text": "Só uma pequena correção, até minha, eu há pouco disse que o ano passado, 2023, tinha sido o ano de recorde e na verdade queria ter dito 2013, fica essa a minha correção.",
         "time": 1379.389
     },
     {
-        "speaker": "Moderadora",
+        "speaker": "Mariana Mortágua",
         "text": "Acho que foi 120 mil pessoas ou por aí.",
         "time": 1385.755
     },
@@ -971,17 +1002,17 @@
     },
     {
         "speaker": "Moderadora",
-        "text": "Rui Tavares, de facto foi este um assunto que marcou a candidatura, a sua candidatura há dois anos, mas pedida então que respondesse à Mariana Mortágua.",
+        "text": "Rui Tavares, de facto foi este um assunto que marcou a candidatura, a sua candidatura há dois anos, mas pedia-lhe então que respondesse à Mariana Mortágua.",
         "time": 1388.26
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Está esclarecido e já estava esclarecido nessa altura.",
+        "text": "Mas está esclarecido e já estava esclarecido nessa altura.",
         "time": 1398.783
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Porquê é que o livro quer saber mais?",
+        "text": "Porque é que o LIVRE quer saber mais?",
         "time": 1402.405
     },
     {
@@ -991,7 +1022,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "E eu vejo muita gente à esquerda como à direita que tem muitas certezas sobre o rendimento básico incondicional.",
+        "text": "E eu vejo muita gente, à esquerda como à direita, que tem muitas certezas sobre o rendimento básico incondicional.",
         "time": 1406.008
     },
     {
@@ -1006,22 +1037,22 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Enfim, a implementação dele, com que fontes de rendimento, outros ainda porque acham que isto vem destruir certas outras provisões do Estado Social.",
+        "text": "enfim, a implementação dele, com que fontes de rendimento, outros ainda porque acham que isto vem destruir certas outras provisões do Estado Social.",
         "time": 1422.62
     },
     {
         "speaker": "Rui Tavares",
-        "text": "E, portanto, estamos assim um bocadinho numa discussão que faz lembrar um bocadinho as discussões sobre a gravidade antes do Copérnico, quer dizer, e o que o livro diz é, experimente-se, 20 a 30 milhões de euros e, portanto, ordens de magnitude abaixo do que aquilo que a Mariana disse, e eu sei que a Mariana frisou que era um, e é,",
+        "text": "E, portanto, estamos assim um bocadinho numa discussão que faz lembrar um bocadinho as discussões sobre a gravidade antes do Copérnico, quer dizer, e o que o LIVRE diz é, experimente-se. 20 a 30 milhões de euros e, portanto, ordens de magnitude abaixo do que aquilo que a Mariana disse, e eu sei que a Mariana frisou que era, e é,",
         "time": 1432.966
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Um projeto pelo outro, foi o que propusemos no Orçamento de Estado, que pode ser testado em duas comunidades portuguesas, uma do interior, outra numa área metropolitana, uma numa ilha de um dos nossos arquipélagos ou onde quer que seja, e que nos permite saber o quê?",
+        "text": "um projeto piloto, foi o que propusemos no Orçamento de Estado, que pode ser testado em duas comunidades portuguesas, uma do interior, outra numa área metropolitana, uma numa ilha de um dos nossos arquipélagos ou onde quer que seja, e que nos permite saber o quê?",
         "time": 1452.338
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Permite-nos saber aquilo que, por exemplo, no teste que foi feito na Finlândia, deu para perceber, que é entre RSI e RBI, as pessoas que tinham RSI procuravam menos trabalho, menos emprego, porque tinham medo da guilhotina de deixar de receber aquele rendimento.",
+        "text": "Permite-nos saber aquilo que, por exemplo, no teste que foi feito na Finlândia, deu para perceber, que é: entre RSI e RBI, as pessoas que tinham RSI procuravam menos trabalho, menos emprego, porque tinham medo da guilhotina de deixar de receber aquele rendimento.",
         "time": 1467.355
     },
     {
@@ -1031,7 +1062,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Por outro lado, permite-nos resolver muitos problemas administrativos, porque, na verdade, nos últimos anos nós temos feito rendimentos básicos e incondicionais, nós no mundo, de emergência, ou ad hoc, ou pontuais, ou transferências diretas para as contas bancárias das pessoas.",
+        "text": "Por outro lado, permite-nos resolver muitos problemas administrativos, porque, na verdade, nos últimos anos nós temos feito rendimentos básicos incondicionais, nós no mundo, de emergência, ou ad hoc, ou pontuais, ou transferências diretas para as contas bancárias das pessoas.",
         "time": 1487.734
     },
     {
@@ -1041,7 +1072,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "E deparamos com problemas de implementação, que têm a ver com pessoas que não deviam receber, recebem.",
+        "text": "E deparamo-nos com problemas de implementação, que têm a ver com pessoas que não deviam receber, recebem.",
         "time": 1503.576
     },
     {
@@ -1051,7 +1082,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Pessoas que não têm conta bancária e que precisam de receber por valor postal, que aliás é uma luta do bloco e correta, bem feita, porque nem toda a gente tem conta bancária em Portugal.",
+        "text": "Pessoas que não têm conta bancária e que precisam de receber por vale postal, que aliás é uma luta do Bloco e correta, bem feita, porque nem toda a gente tem conta bancária em Portugal.",
         "time": 1509.24
     },
     {
@@ -1067,21 +1098,21 @@
     {
         "speaker": "Rui Tavares",
         "text": "Nós fizemos semana de 4 dias com 1000 trabalhadores de 40 empresas.",
-        "time": 1538.5720000000001
+        "time": 1538.572
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Os resultados são fantásticos, as pessoas têm menos ansiedade, menos estúrbios do sono, fazem a melhor consumição Covid-19.",
+        "text": "Os resultados são fantásticos, as pessoas têm menos ansiedade, menos distúrbios do sono, fazem melhor conciliação com a vida familiar.",
         "time": 1542.153
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Mas o que nós queremos é alargar o teste",
+        "text": "Mas o que nós queremos é alargar o teste a milhões e a milhares.",
         "time": 1548.455
     },
     {
         "speaker": "Moderadora",
-        "text": "Partilham esta medida da semana de quatro dias.",
+        "text": "Mariana Mortágua, quer só comentar essa questão? Porque de facto... Partilham esta medida da semana de quatro dias?",
         "time": 1551.656
     },
     {
@@ -1091,12 +1122,17 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "E isso é o que dizem... É uma das coisas que os setores procuram.",
+        "text": "E isso é o que dizem...",
         "time": 1562.361
     },
     {
+        "speaker": "Rui Tavares",
+        "text": "É uma das coisas que as pessoas procuram.",
+        "time": 1563.000
+    },
+    {
         "speaker": "Mariana Mortágua",
-        "text": "É o que nós sabemos, os procuram.",
+        "text": "É o que nós sabemos, eles procuram menos horas de trabalho.",
         "time": 1564.562
     },
     {
@@ -1106,8 +1142,18 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Acho que para já temos que ver quais são os setores... Não há falta de mão de obra, mesmo a administração pública que já tem tanta falta de... Todos os dados sobre a semana de 4 dias mostram que a produtividade aumenta, que é possível ter resposta dos serviços, que há uma adaptação que acontece e já há experiências sobre isso e, portanto, tudo nos diz que devem ser alargadas e devemos caminhar para aí.",
+        "text": "Acho que para já temos que ver quais são os setores...",
         "time": 1569.056
+    },
+    {
+        "speaker": "Moderadora",
+        "text": "Não há falta de mão de obra, mesmo a administração pública que já tem tanta falta de pessoas?",
+        "time": 1571.000
+    },
+    {
+        "speaker": "Mariana Mortágua",
+        "text": "Todos os dados sobre a semana de 4 dias mostram que a produtividade aumenta, que é possível ter resposta dos serviços, que há uma adaptação que acontece, e já há experiências sobre isso e, portanto, tudo nos diz que devem ser alargadas e devemos caminhar para aí.",
+        "time": 1575.000
     },
     {
         "speaker": "Mariana Mortágua",
@@ -1115,13 +1161,13 @@
         "time": 1591.486
     },
     {
-        "speaker": "Mariana Mortágua",
-        "text": "Muito rapidamente, porque há mais um tema que temos de discutir e temos de ficar sem tempo.",
+        "speaker": "Moderadora",
+        "text": "Muito rapidamente, porque há mais um tema que temos de discutir e estamos a ficar sem tempo.",
         "time": 1594.507
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Porque se estamos a falar sobre um apoio social e a forma como ele é atribuído, totalmente de acordo.",
+        "text": "E vou discutir e ser telegráfica. Porque se estamos a falar sobre um apoio social e a forma como ele é atribuído, totalmente de acordo.",
         "time": 1598.029
     },
     {
@@ -1131,7 +1177,7 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Outra coisa diferente é falar no rendimento básico universal.",
+        "text": "Outra coisa diferente é falar de um rendimento básico universal.",
         "time": 1606.115
     },
     {
@@ -1141,17 +1187,17 @@
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Há cinco anos que o Gulliver apresenta isto nos seus programas e torna-se um bocadinho estranho que o apresente sem assumir que se é para ser universal ou não, porque senão não é realmente básico.",
+        "text": "Há cinco anos que o LIVRE apresenta isto nos seus programas, e torna-se um bocadinho estranho que o apresente sem assumir que se é para ser universal ou não, porque senão não é rendimento básico...",
         "time": 1614.201
     },
     {
         "speaker": "Moderadora",
-        "text": "Mariana, estamos na reta final mesmo.",
+        "text": "Fica essa consideração, Mariana. Estamos na reta final mesmo.",
         "time": 1625.064
     },
     {
         "speaker": "Moderadora",
-        "text": "Este tema eu agora vou ter que começar com a Mariana para depois fecharmos o debate com o Rui Tavares.",
+        "text": "Este tema — eu agora vou ter que começar com a Mariana para depois fecharmos o debate com o Rui Tavares.",
         "time": 1626.785
     },
     {
@@ -1166,62 +1212,62 @@
     },
     {
         "speaker": "Moderadora",
-        "text": "Ou continua a defender a ideia de que Portugal deve sair da NATO porque a Aliança Atlântica, na opinião do Bloco, e agora estou a citar o que diz o seu programa, promove estratégias de detenção em todo o mundo?",
+        "text": "Ou continua a defender a ideia de que Portugal deve sair da NATO porque a Aliança Atlântica, na opinião do Bloco, e agora estou a citar o que diz o seu programa, «promove estratégias de tensão em todo o mundo»?",
         "time": 1651.458
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Bom, em primeiro lugar, para acabar só a frase anterior, a divisão é entre um apoio social ou um rendimento universal, às vezes devemos distingui-lo para não criar ilusões, depois sabemos que não podem ser concretizadas porque não são suportáveis do ponto de vista financeiro.",
+        "text": "Bom, em primeiro lugar, para acabar só a frase anterior, a divisão era entre um apoio social ou um rendimento universal, acho que devemos distingui-lo para não criar ilusões que depois sabemos que não podem ser concretizadas porque não são suportáveis do ponto de vista financeiro.",
         "time": 1662.347
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Relativamente à Nati, para não fugir da questão, em primeiro lugar, o Bloco de Esquerda",
+        "text": "Relativamente à NATO, e para não fugir da questão: em primeiro lugar, o Bloco de Esquerda",
         "time": 1676.402
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "apoiar a autodeterminação dos povos, tal como a Constituição o diz, e por isso apoiámos a Ucrânia, o direito à defesa da Ucrânia desde o primeiro momento, e apoiámos o apoio à Ucrânia e o apoio à defesa da Ucrânia, e que isso não esteja em causa, eu acho que isso nunca foi uma polémica com o Bloco.",
+        "text": "apoia a autodeterminação dos povos, tal como a Constituição o diz, e por isso apoiámos a Ucrânia, o direito à defesa da Ucrânia desde o primeiro momento, e apoiámos o apoio à Ucrânia e o apoio à defesa da Ucrânia — e que isso não esteja em causa, eu acho que isso nunca foi uma polémica com o Bloco.",
         "time": 1682.148
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Relativamente à NATO, sabemos o contexto histórico, a decisão de entrada da NATO foi uma decisão da ditadura",
+        "text": "Relativamente à NATO, sabemos o contexto histórico, a decisão de entrada da NATO foi uma decisão da ditadura portuguesa de Salazar.",
         "time": 1700.297
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "portuguesa de Salazar, a Constituição da República Portuguesa, no seu artigo 7º, defende a dissolução dos blocos militares, neste momento a Nato é o que existe.",
+        "text": "A Constituição da República Portuguesa, no seu artigo 7º, defende a dissolução dos blocos militares, neste momento a NATO é o que existe.",
         "time": 1707.261
     },
     {
         "speaker": "Moderadora",
-        "text": "Mas à luta que está a acontecer, não considera que a Nato ganhou uma nova relevância?",
+        "text": "Mas à luz que está a acontecer, não considera que a NATO ganhou uma nova relevância?",
         "time": 1716.111
     },
     {
-        "speaker": "Moderadora",
-        "text": "Não, é óbvio que a Nato gostava",
+        "speaker": "Mariana Mortágua",
+        "text": "Não, é óbvio que a NATO, que estava,",
         "time": 1720.055
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Como dizia o presidente Macron, a morte cerebral surge depois da guerra do Ucrânio e da invasão de Putin de uma outra forma.",
+        "text": "como dizia o presidente Macron, em morte cerebral, surge depois da guerra da Ucrânia e da invasão de Putin de uma outra forma.",
         "time": 1722.438
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Mas isso não apaga o que diz a Constituição da República Portuguesa, não apaga a posição histórica do Bloco.",
+        "text": "Mas isso não apaga o que diz a Constituição da República Portuguesa, não apaga a posição histórica do Bloco...",
         "time": 1731.666
     },
     {
         "speaker": "Moderadora",
-        "text": "Mas ainda assim, só para que fique claro, já estamos mesmo na reta final, o Bloco de Esquerda continua a defender a saída de Portugal da Nato?",
+        "text": "Mas ainda assim, só para que fique claro, porque já estamos mesmo na reta final: o Bloco de Esquerda continua a defender a saída de Portugal da NATO?",
         "time": 1735.55
     },
     {
         "speaker": "Mariana Mortágua",
-        "text": "Há pouco a Rosa perguntou-me porque é que eu teresia a Constituição da República Portuguesa, eu olho para ela, é exatamente por isso, porque é precisamente o que diz a Constituição da República Portuguesa, que aliás há um processo de revisão constitucional em curso, o LIVRE não propôs alterar este artigo que pretende acabar com os blocos militares e nós queremos trabalhar para a paz, sempre foi essa a nossa posição e continua a ser.",
+        "text": "Há pouco a Rosa perguntou-me porque é que eu trazia a Constituição da República Portuguesa, olhou para ela; é exatamente por isso, porque é precisamente o que diz a Constituição da República Portuguesa, que aliás há um processo de revisão constitucional em curso, o LIVRE não propôs alterar este artigo que pretende acabar com os blocos militares e nós queremos trabalhar para a paz, sempre foi essa a nossa posição e continua a ser.",
         "time": 1741.374
     },
     {
@@ -1231,8 +1277,13 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Também vou fazer uma refrescagem rápida de uma ideia muito concreta.",
+        "text": "Também vou fazer uma repescagem rápida de uma ideia muito concreta.",
         "time": 1768.271
+    },
+    {
+        "speaker": "Moderadora",
+        "text": "Estamos a ficar sem tempo, Rui, eu pedia-lhe que respondesse à minha pergunta.",
+        "time": 1769.000
     },
     {
         "speaker": "Rui Tavares",
@@ -1241,12 +1292,12 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Bem, a Nato, vamos lá ver o que é que acontece nos Estados Unidos no fim deste ano.",
+        "text": "Bem, a NATO, vamos lá ver o que é que acontece nos Estados Unidos no fim deste ano.",
         "time": 1788.843
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Ou seja, ainda é capaz de se autodissolver antes de que façamos outro processo de revisão constitucional.",
+        "text": "Ou seja, ainda é capaz de se auto-dissolver antes de que façamos outro processo de revisão constitucional.",
         "time": 1792.626
     },
     {
@@ -1261,7 +1312,7 @@
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Porque a União Europeia não é um bloco político ou militar, a União Europeia é muito mais do que isso.",
+        "text": "Porque a União Europeia não é um bloco político-militar, a União Europeia é muito mais do que isso.",
         "time": 1813.723
     },
     {
@@ -1270,23 +1321,28 @@
         "time": 1818.108
     },
     {
+        "speaker": "Mariana Mortágua",
+        "text": "Isso é óbvio.",
+        "time": 1822.000
+    },
+    {
         "speaker": "Rui Tavares",
         "text": "E aí, de facto, é que me parece que há aqui uma questão muito importante.",
         "time": 1823.233
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Se nós deixarmos o debate da Europa apenas ser feito pelos partidos do centrão, se nós desistirmos da Europa, então aí os macarrons vão dominar.",
+        "text": "Se nós deixarmos o debate da Europa apenas ser feito pelos partidos do centrão, se nós desistirmos da Europa, então aí os Macrons vão dominar.",
         "time": 1828.178
     },
     {
         "speaker": "Rui Tavares",
-        "text": "Agora, nós no livro consideramos que a esquerda não pode deixar de ter sobre a Europa uma visão de futuro, da sua democratização, da sua refundação, incluindo nos debates difícils, e um deles é que a Europa tem que ter a sua cooperação em defesa.",
+        "text": "Agora, nós no LIVRE consideramos que a esquerda não pode deixar de ter sobre a Europa uma visão de futuro, da sua democratização, da sua refundação, incluindo nos debates difíceis, e um deles é que a Europa tem que ter a sua cooperação em defesa.",
         "time": 1837.342
     },
     {
-        "speaker": "Rui Tavares",
-        "text": "Acabamos com o acordo.",
+        "speaker": "Moderadora",
+        "text": "Acabamos com um acordo.",
         "time": 1849.588
     },
     {
