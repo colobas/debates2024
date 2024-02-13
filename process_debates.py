@@ -1,15 +1,22 @@
 import os
+import dotenv
 import argparse
+import subprocess
+import logging
+import hashlib
 from pathlib import Path
+
 import yaml
 import json
-import subprocess
+import re
+
 import bs4
 import requests
-import logging
-import re
 import webvtt
 
+from googleapiclient.discovery import build
+from google.oauth2.credentials import Credentials
+from video_utils import upload_to_gdrive
 
 def convert_to_seconds(time):
     """
@@ -89,51 +96,58 @@ def find_m3u8_and_thumbnail(url):
     return None, None
 
 
-def get_audio_and_video(url, audio_path, hls_path, headers=None):
+def get_audio_and_video(url, audio_path, headers=None, gdrive_service=None):
     """
     Use ffmpeg to download the audio and video from a given m3u8 link
     """
 
-    if Path(audio_path).exists() and Path(hls_path).exists():
-        return
-
     Path(audio_path).parent.mkdir(exist_ok=True, parents=True)
-    Path(hls_path).parent.mkdir(exist_ok=True, parents=True)
 
-    mp4_path = hls_path.with_suffix(".mp4")
+    m3u8_path = audio_path.with_suffix(".m3u8")
+    m3u8_orig_path = audio_path.with_suffix(".m3u8.orig")
 
-    # download video
-    if not mp4_path.exists():
-        if headers is not None:
-            headers = "\r\n".join([f"{k}: {v}" for k,v in headers.items()]) + "\r\n"
-            cmd = ["ffmpeg", "-headers", headers, "-i", url, "-c", "copy", mp4_path]
-        else:
-            cmd = ["ffmpeg", "-i", url, "-c", "copy", mp4_path]
-        subprocess.run(cmd)
+    if not m3u8_path.exists():
+        mp4_path = audio_path.with_suffix(".mp4")
 
-    # extract audio
-    options = [
-        "-vn", # Disables video recording
-        "-acodec", "libmp3lame", # Specifies MP3 encoding
-        "-q:a", "0", # High quality audio
-    ]
+        # download video
+        if not mp4_path.exists():
+            if headers is not None:
+                headers = "\r\n".join([f"{k}: {v}" for k,v in headers.items()]) + "\r\n"
+                cmd = ["ffmpeg", "-headers", headers, "-i", url, "-c", "copy", mp4_path]
+            else:
+                cmd = ["ffmpeg", "-i", url, "-c", "copy", mp4_path]
+            subprocess.run(cmd)
 
-    cmd = ["ffmpeg", "-i", mp4_path, *options, audio_path]
-    subprocess.run(cmd)
+        if not m3u8_orig_path.exists():
+            # create hls
+            options = [
+                "-hls_time", "10", # segment duration
+                "-hls_list_size", "0", # list all segments
+                "-hls_segment_filename", f"{m3u8_path.with_suffix('')}_segment_%03d.ts",
+                "-f", "hls",
+            ]
 
-    # create hls
-    options = [
-        "-hls_time", "10", # segment duration
-        "-hls_list_size", "0", # list all segments
-        "-hls_segment_filename", f"{hls_path.with_suffix('')}_segment_%03d.ts",
-        "-f", "hls",
-    ]
+            cmd = ["ffmpeg", "-i", mp4_path, *options, str(m3u8_orig_path)]
+            subprocess.run(cmd)
 
-    cmd = ["ffmpeg", "-i", mp4_path, *options, hls_path]
-    subprocess.run(cmd)
+            # upload to gdrive using rclone
 
-    # remove the mp4
-    mp4_path.unlink()
+        if not audio_path.exists():
+            # extract audio
+            options = [
+                "-vn", # Disables video recording
+                "-acodec", "libmp3lame", # Specifies MP3 encoding
+                "-q:a", "0", # High quality audio
+               ]
+
+            cmd = ["ffmpeg", "-i", mp4_path, *options, audio_path]
+            subprocess.run(cmd)
+
+        # upload the video to youtube
+        upload_to_gdrive(audio_path.parent, audio_path.stem, gdrive_service)
+
+    return f"debates/media/{audio_path.stem}.m3u8"
+
 
 def slugify(title):
     """
@@ -189,7 +203,7 @@ def transcribe_audio(audio_path, output_root):
         (output_root / f"transcriptions/{name}.vtt").unlink()
 
 
-def process_debate(*, title, url, output_root, skip_transcription=False):
+def process_debate(*, title, url, output_root, gdrive_service, skip_transcription=False, skip_upload=False):
     """
     Process a debate from the input data
     """
@@ -200,8 +214,7 @@ def process_debate(*, title, url, output_root, skip_transcription=False):
         return
 
     slug = slugify(title)
-    audio_path = output_root / f"audio/{slug}.mp3"
-    hls_path = output_root / f"hls/{slug}.m3u8"
+    audio_path = output_root / f"media/{slug}.mp3"
 
     if "rtp.pt" in url:
         headers = {
@@ -222,19 +235,19 @@ def process_debate(*, title, url, output_root, skip_transcription=False):
     else:
         headers = None
 
-    get_audio_and_video(m3u8_url, audio_path, hls_path, headers=headers)
+    if not skip_upload:
+        get_audio_and_video(m3u8_url, audio_path, headers=headers, gdrive_service=gdrive_service)
+        out = {
+            "slug": slug,
+            "title": title,
+            "original_url": url,
+        }
+
+        with open(output_root / f"{slug}.json", "w") as f:
+            json.dump(out, f, indent=4)
 
     if not skip_transcription:
         transcribe_audio(audio_path, output_root)
-
-    out = {
-        "slug": slug,
-        "title": title,
-        "original_url": url,
-    }
-
-    with open(output_root / f"{slug}.json", "w") as f:
-        json.dump(out, f, indent=4)
 
     return {"title": title, "thumbnail": thumbnail_url, "slug": slug}
 
@@ -243,6 +256,10 @@ def main(args):
     input_path = Path(args.input)
     output_root = Path(args.output_root)
     output_root.mkdir(exist_ok=True, parents=True)
+
+    CLIENT_SECRETS_FILE = os.environ["CLIENT_SECRETS_FILE"]
+    creds = Credentials.from_authorized_user_file(CLIENT_SECRETS_FILE)
+    gdrive_service = build('drive', 'v3', credentials=creds)
 
     with open(input_path, "r") as f:
         data = yaml.safe_load(f)
@@ -254,7 +271,7 @@ def main(args):
         if output_path.exists() and not args.force:
             continue
 
-        summary = process_debate(**debate, output_root=output_root, skip_transcription=args.skip_transcription)
+        summary = process_debate(**debate, output_root=output_root, skip_transcription=args.skip_transcription, gdrive_service=gdrive_service, skip_upload=args.skip_upload)
         master_json.append(summary)
 
     with open(args.output_master_json, "w") as f:
@@ -262,11 +279,14 @@ def main(args):
 
 
 if __name__ == "__main__":
+    dotenv.load_dotenv()
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=str, default="debates.yaml")
     parser.add_argument("--output_root", type=str, default="public/debates")
     parser.add_argument("--output-master-json", type=str, default="src/debates.json")
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--skip-transcription", action="store_true")
+    parser.add_argument("--skip-upload", action="store_true")
     args = parser.parse_args()
     main(args)
