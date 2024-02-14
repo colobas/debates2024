@@ -16,15 +16,16 @@ def set_public_permission(file_id, service):
     ).execute()
 
 
-def direct_link(file_id):
+def direct_link(file_id, with_proxy=True):
     video_url = f"https://drive.google.com/uc?id={file_id}"
 
-    #return "https://api.allorigins.win/raw?url=" + quote(video_url, safe="")
-    #return "https://corsproxy.io/?" + quote(video_url, safe="")
-    return "https://worker-little-base-2714.mail-2e4.workers.dev/?" + quote(video_url, safe="")
+
+    if with_proxy:
+        return "https://worker-little-base-2714.mail-2e4.workers.dev/?" + quote(video_url, safe="")
+    return video_url
 
 
-def get_segment_file_ids(slug):
+def get_file_ids(slug):
     # get segment file ids: rclone lsjson remoteName:targetFolder --files-only | jq '.[] | {name, id}'
     cmd = [
         "rclone", "lsjson",
@@ -50,23 +51,6 @@ def get_segment_file_ids(slug):
     return file_ids
 
 
-def set_folder_permissions(slug, service):
-    folder_name = f"debates2024/{slug}"
-
-    # get folder id
-    result = service.files().list(q=f"name='{folder_name}'").execute()
-    folder_id = result["files"][0]["id"]
-
-    # set folder permissions
-    anyone_permission = {
-        'type': 'anyone',
-        'role': 'reader',
-    }
-    service.permissions().create(
-        fileId=folder_id,
-        body=anyone_permission,
-    ).execute()
-
 def get_segment_duration(segment_path):
     cmd = [
         "ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1",
@@ -91,8 +75,21 @@ def upload_to_gdrive(root_path, slug, service):
     ]
     subprocess.run(cmd, check=True)
 
+    # copy mp3 to gdrive
+    cmd = [
+        "rclone", "copy", "--check-first", "--progress", str(root_path),
+        "--include", f"{slug}.mp3",
+        "--ignore-existing",
+        f"debates:debates2024/{slug}",
+    ]
+    subprocess.run(cmd, check=True)
+
     # get segment file ids
-    file_ids = get_segment_file_ids(slug)
+    file_ids = get_file_ids(slug)
+
+    # get mp3 file id
+    mp3_id = file_ids[f"{slug}.mp3"]
+    set_public_permission(mp3_id, service)
 
     # make m3u8
     with open(f"{root_path}/{slug}.m3u8", "w") as f:
@@ -105,7 +102,7 @@ def upload_to_gdrive(root_path, slug, service):
         for i in trange(n_segments, desc="Creating m3u8..."):
             segment_path = f"{slug}_segment_{i:0{n_digits}d}.ts"
             file_id = file_ids[segment_path]
-            #set_public_permission(file_id, service)
+            set_public_permission(file_id, service)
 
             # get duration
             duration = get_segment_duration(root_path / segment_path)
@@ -114,4 +111,4 @@ def upload_to_gdrive(root_path, slug, service):
             f.write(direct_link(file_id) + "\n")
         f.write("#EXT-X-ENDLIST\n")
 
-    return
+    return direct_link(mp3_id, with_proxy=False)

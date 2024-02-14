@@ -16,7 +16,7 @@ import webvtt
 
 from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
-from video_utils import upload_to_gdrive
+from video_utils import upload_to_gdrive, get_file_ids, direct_link
 
 def convert_to_seconds(time):
     """
@@ -144,9 +144,12 @@ def get_audio_and_video(url, audio_path, headers=None, gdrive_service=None):
             subprocess.run(cmd)
 
         # upload the video to youtube
-        upload_to_gdrive(audio_path.parent, audio_path.stem, gdrive_service)
+        mp3_direct_link = upload_to_gdrive(audio_path.parent, audio_path.stem, gdrive_service)
+    else:
+        file_ids = get_file_ids(audio_path.stem)
+        mp3_direct_link = direct_link(file_ids[f"{audio_path.stem}.mp3"], with_proxy=False)
 
-    return f"debates/media/{audio_path.stem}.m3u8"
+    return f"debates/media/{audio_path.stem}.m3u8", mp3_direct_link
 
 
 def slugify(title):
@@ -236,11 +239,13 @@ def process_debate(*, title, url, output_root, gdrive_service, skip_transcriptio
         headers = None
 
     if not skip_upload:
-        get_audio_and_video(m3u8_url, audio_path, headers=headers, gdrive_service=gdrive_service)
+        _, mp3_direct_link = get_audio_and_video(m3u8_url, audio_path, headers=headers,
+                                                 gdrive_service=gdrive_service)
         out = {
             "slug": slug,
             "title": title,
             "original_url": url,
+            "audio_url": mp3_direct_link,
         }
 
         with open(output_root / f"{slug}.json", "w") as f:

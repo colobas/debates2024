@@ -39,13 +39,6 @@
     console.log(video_url);
 
     if (Hls.isSupported()) {
-      /*const config = {
-        xhrSetup: function (xhr, url) {
-          xhr.withCredentials = true;
-        },
-      };
-
-      const hls = new Hls(config);*/
       const hls = new Hls();
       hls.loadSource(video_url);
       hls.attachMedia(video);
@@ -162,4 +155,4 @@
 
 <a href="/">Voltar à página inicial</a>
 <a href={debateData.original_url} target="_blank">Link para o vídeo original</a>
-<a href="/debates/media/{params.slug}.mp3" download={debateData.title}>Link para o áudio</a>
+<a href={debateData.audio_url} download={debateData.title}>Link para o áudio</a>
