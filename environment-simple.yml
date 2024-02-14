@@ -1,0 +1,15 @@
+name: debates
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - ffmpeg=6.1.1
+  - rclone
+  - pip:
+    - beautifulsoup4
+    - python-dotenv
+    - google-api-python-client
+    - google-auth
+    - google-auth-oauthlib
+    - google-auth-httplib2
