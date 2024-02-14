@@ -33,5 +33,50 @@
         "title": "Livre vs IL",
         "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12901/p12901_1_20240207000000e002t8819.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
         "slug": "livre-vs-il"
+    },
+    {
+        "title": "Livre vs PS",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12900/p12900_2_20240209000000e003t2868.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "livre-vs-ps"
+    },
+    {
+        "title": "PSD vs PCP",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12900/p12900_2_20240210000000e004t1350.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "psd-vs-pcp"
+    },
+    {
+        "title": "IL vs PAN",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12899/p12899_1_20240209000000e004t6009.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "il-vs-pan"
+    },
+    {
+        "title": "Chega vs PCP",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12901/p12901_1_20240209000000e003t0509.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "chega-vs-pcp"
+    },
+    {
+        "title": "BE vs Chega",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12900/p12900_1_20240213224338e006t6815.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "be-vs-chega"
+    },
+    {
+        "title": "PSD vs Chega",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12900/p12900_2_2024021215609.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "psd-vs-chega"
+    },
+    {
+        "title": "BE vs PCP",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12899/p12899_1_2024021215588.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "be-vs-pcp"
+    },
+    {
+        "title": "PSD vs PAN",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12899/p12899_1_20240211000000e005t3623.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "psd-vs-pan"
+    },
+    {
+        "title": "PS vs PAN",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12901/p12901_1_20240210000000e004t8847.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "ps-vs-pan"
     }
 ]

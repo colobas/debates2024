@@ -30,15 +30,27 @@
     generateSpeakerColors();
   }
     
-  // Async function to assemble video
+  // Async function to assemble video.
   async function assembleVideo() {
     const video = document.getElementById('video');
+    const video_url = `/debates/media/${params.slug}.m3u8`;
+
+    // print video_url to console
+    console.log(video_url);
+
     if (Hls.isSupported()) {
+      /*const config = {
+        xhrSetup: function (xhr, url) {
+          xhr.withCredentials = true;
+        },
+      };
+
+      const hls = new Hls(config);*/
       const hls = new Hls();
-      hls.loadSource(`/debates/hls/${params.slug}.m3u8`);
+      hls.loadSource(video_url);
       hls.attachMedia(video);
     } else {
-      video.src = `/debates/hls/${params.slug}.m3u8`;
+      video.src = video_url;
     }
 
     const chatContainer = document.querySelector('.chat-container');
@@ -150,4 +162,4 @@
 
 <a href="/">Voltar à página inicial</a>
 <a href={debateData.original_url} target="_blank">Link para o vídeo original</a>
-<a href="/debates/audio/{params.slug}.mp3" download={debateData.title}>Link para o áudio</a>
+<a href="/debates/media/{params.slug}.mp3" download={debateData.title}>Link para o áudio</a>

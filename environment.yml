@@ -7,8 +7,14 @@ dependencies:
   - python=3.10
   - pytorch=2.0.0
   - ffmpeg=6.1.1
+  - rclone
   - pip:
     - beautifulsoup4
     - git+https://github.com/m-bain/whisperx.git@8227807#egg=whisperx
     - torchaudio==2.0.0
     - webvtt-py
+    - python-dotenv
+    - google-api-python-client
+    - google-auth
+    - google-auth-oauthlib
+    - google-auth-httplib2
