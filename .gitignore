@@ -9,5 +9,6 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 public/debates/media/*.mp4
+public/debates/media/*.mp3
 public/debates/media/*.ts
 __pycache__
