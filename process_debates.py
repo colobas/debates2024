@@ -158,12 +158,16 @@ def slugify(title):
     return title.lower().replace(" ", "-")
 
 
-def transcribe_audio(audio_path, output_root):
+def transcribe_audio(audio_path, output_root, mp3_direct_link):
     """
     use whisperx to transcribe the audio
     """
 
     name = audio_path.stem
+
+    if not audio_path.exists():
+        cmd = ["wget", "-O", str(audio_path), mp3_direct_link]
+        subprocess.run(cmd)
 
     if not (output_root / f"transcriptions/{name}.json").exists():
         Path(f"{output_root}/transcriptions").mkdir(exist_ok=True, parents=True)
@@ -250,7 +254,10 @@ def process_debate(*, title, url, output_root, gdrive_service, skip_transcriptio
             json.dump(out, f, indent=4)
 
     if not skip_transcription:
-        transcribe_audio(audio_path, output_root)
+        with open(output_root / f"{slug}.json", "r") as f:
+            mp3_direct_link = json.load(f)["audio_url"]
+
+        transcribe_audio(audio_path, output_root, mp3_direct_link)
 
     return {"title": title, "thumbnail": thumbnail_url, "slug": slug}
 
