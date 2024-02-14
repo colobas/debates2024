@@ -14,8 +14,6 @@ import bs4
 import requests
 import webvtt
 
-from googleapiclient.discovery import build
-from google.oauth2.credentials import Credentials
 from video_utils import upload_to_gdrive, get_file_ids, direct_link
 
 def convert_to_seconds(time):
@@ -262,9 +260,15 @@ def main(args):
     output_root = Path(args.output_root)
     output_root.mkdir(exist_ok=True, parents=True)
 
-    CLIENT_SECRETS_FILE = os.environ["CLIENT_SECRETS_FILE"]
-    creds = Credentials.from_authorized_user_file(CLIENT_SECRETS_FILE)
-    gdrive_service = build('drive', 'v3', credentials=creds)
+    if not args.skip_upload:
+        from googleapiclient.discovery import build
+        from google.oauth2.credentials import Credentials
+
+        CLIENT_SECRETS_FILE = os.environ["CLIENT_SECRETS_FILE"]
+        creds = Credentials.from_authorized_user_file(CLIENT_SECRETS_FILE)
+        gdrive_service = build('drive', 'v3', credentials=creds)
+    else:
+        creds, gdrive_service = None, None
 
     with open(input_path, "r") as f:
         data = yaml.safe_load(f)
