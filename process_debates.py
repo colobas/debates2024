@@ -15,6 +15,8 @@ import requests
 import webvtt
 
 from video_utils import upload_to_gdrive, get_file_ids, direct_link
+from speaker_party_conversion import speaker_party_conversion
+
 
 def convert_to_seconds(time):
     """
@@ -155,7 +157,7 @@ def slugify(title):
     Turn a title into a slug
     """
 
-    return title.lower().replace(" ", "-")
+    return title.lower().replace(" - ", "-vs-")
 
 
 def transcribe_audio(audio_path, output_root, mp3_direct_link):
@@ -213,12 +215,18 @@ def process_debate(*, title, url, output_root, gdrive_service, skip_transcriptio
     Process a debate from the input data
     """
 
+    slug = slugify(title)
+    rev_slug = "-".join(slug.split("-")[::-1])
+
+    # check if reverse slug exists, if so, slug is the reverse slug
+    if (output_root / f"{rev_slug}.json").exists():
+        slug = rev_slug
+
     m3u8_url, thumbnail_url = find_m3u8_and_thumbnail(url)
     if m3u8_url is None or thumbnail_url is None:
         logging.warning(f"Could not find m3u8 or thumbnail for {url}")
         return {"title": title, "thumbnail": thumbnail_url, "slug": slug}
 
-    slug = slugify(title)
     audio_path = output_root / f"media/{slug}.mp3"
 
     if "rtp.pt" in url:
@@ -262,8 +270,52 @@ def process_debate(*, title, url, output_root, gdrive_service, skip_transcriptio
     return {"title": title, "thumbnail": thumbnail_url, "slug": slug}
 
 
+def scrape_page(url):
+    debates = {}
+
+    page = requests.get(url)
+    page = bs4.BeautifulSoup(page.text, "html.parser")
+
+    # find div with id "listProgramsContent"
+    div = page.find("div", id="listProgramsContent")
+
+    # find <article> tags -> one per "episode"
+    articles = div.find_all("article")
+    for article in articles:
+        title = article.find("h4", class_="episode-title").text.strip()
+        title = " - ".join([speaker_party_conversion[s.strip()] for s in title.split(" - ")])
+        href = article.find("a", class_="episode-item")["href"]
+
+        if href is not None:
+            debates[title] = "https://www.rtp.pt" + href
+
+    return debates
+
+
+def scrape_debate_links():
+    ROOT_URLS = [
+        "https://www.rtp.pt/play/p12900/debates-legislativas-2024",
+        "https://www.rtp.pt/play/p12899/debates-legislativas-2024-sicsic-noticias",
+        "https://www.rtp.pt/play/p12901/debates-legislativas-2024-tvicnn",
+    ]
+
+    debates = {}
+
+    for url in ROOT_URLS:
+        new_debates = scrape_page(url)
+        debates.update(new_debates)
+
+        # get a random url from new_debates, for the second pass
+        # (because one of the episodes will be selected and not have a link)
+        random_url = list(new_debates.values())[0]
+
+        new_debates = scrape_page(random_url)
+        debates.update(new_debates)
+
+    return [{"title": k, "url": v} for k,v in debates.items()]
+
+
 def main(args):
-    input_path = Path(args.input)
     output_root = Path(args.output_root)
     output_root.mkdir(exist_ok=True, parents=True)
 
@@ -277,19 +329,11 @@ def main(args):
     else:
         creds, gdrive_service = None, None
 
-    with open(input_path, "r") as f:
-        data = yaml.safe_load(f)
+
+    debates = scrape_debate_links()
 
     master_json = []
-    for debate in data:
-        output_path = output_root / f"{debate}.json"
-
-        if output_path.exists() and not args.force:
-            continue
-
-        if debate is None:
-            continue
-
+    for debate in debates:
         summary = process_debate(**debate, output_root=output_root, skip_transcription=args.skip_transcription, gdrive_service=gdrive_service, skip_upload=args.skip_upload)
         master_json.append(summary)
 

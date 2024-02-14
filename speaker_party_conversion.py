@@ -1,0 +1,16 @@
+speaker_party_conversion = {
+    "Rui Tavares": "Livre",
+    "Mariana Mortágua": "BE",
+    "Mariana Mortagua": "BE",
+    "Pedro Nuno Santos": "PS",
+    "Luís Montenegro": "PSD",
+    "Luis Montenegro": "PSD",
+    "Paulo Raimundo": "PCP",
+    "Inês de Sousa Real": "PAN",
+    "Ines de Sousa Real": "PAN",
+    "Inês Sousa Real": "PAN",
+    "Ines Sousa Real": "PAN",
+    "Rui Rocha": "IL",
+    "André Ventura": "Chega",
+    "Andre Ventura": "Chega",
+}

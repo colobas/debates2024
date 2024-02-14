@@ -22,8 +22,18 @@ jobs:
           cache-environment: true
           post-cleanup: 'all'
 
+      - name: Setup Rclone
+        uses: AnimMouse/setup-rclone@v1
+        with:
+          rclone_config: ${{ secrets.RCLONE_CONFIG }}
+
+      - name: Extract gcloud config from rclone config
+        run: echo "${{ secrets.RCLONE_CONFIG }}" | python parse_rclone_conf.py > gcloud.json
+
       - name: Process Debates
-        run: python process_debates.py debates.yaml public/debates
+        env:
+          CLIENT_SECRETS_FILE: gcloud.json
+        run: python process_debates.py public/debates --skip-transcription
 
       - name: Commit and Push Changes
         uses: EndBug/add-and-commit@v7
@@ -32,3 +42,9 @@ jobs:
           add: 'public/debates/'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Refresh Rclone Config
+        uses: AnimMouse/setup-rclone/update-config@v1
+        with:
+          rclone_config_secret_name: RCLONE_CONFIG
+          token: ${{ secrets.GITHUB_TOKEN }}
