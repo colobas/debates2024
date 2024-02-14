@@ -211,7 +211,7 @@ def process_debate(*, title, url, output_root, gdrive_service, skip_transcriptio
     m3u8_url, thumbnail_url = find_m3u8_and_thumbnail(url)
     if m3u8_url is None or thumbnail_url is None:
         logging.warning(f"Could not find m3u8 or thumbnail for {url}")
-        return
+        return {"title": title, "thumbnail": thumbnail_url, "slug": slug}
 
     slug = slugify(title)
     audio_path = output_root / f"media/{slug}.mp3"
@@ -269,6 +269,9 @@ def main(args):
         output_path = output_root / f"{debate}.json"
 
         if output_path.exists() and not args.force:
+            continue
+
+        if debate is None:
             continue
 
         summary = process_debate(**debate, output_root=output_root, skip_transcription=args.skip_transcription, gdrive_service=gdrive_service, skip_upload=args.skip_upload)
