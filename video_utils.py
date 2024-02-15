@@ -93,7 +93,7 @@ def upload_to_gdrive(root_path, slug, service):
 
     # make m3u8
     with open(f"{root_path}/{slug}.m3u8", "w") as f:
-        all_segments = list(root_path.glob(f"{slug}_segment_*.ts"))
+        all_segments = [key for key in file_ids.keys() if key.endswith(".ts")]
         n_segments = len(all_segments)
         n_digits = 1 if n_segments < 10 else 2 if n_segments < 100 else 3
 
