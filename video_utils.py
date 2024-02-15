@@ -52,6 +52,23 @@ def get_file_ids(slug):
 
 
 def get_segment_duration(segment_path):
+    root_path = segment_path.parent
+    slug = segment_path.name.split("_")[0]
+
+    if not segment_path.exists():
+        # if we don't have the segment we must download it.
+        # might as well download all of them
+        cmd = [
+            "rclone", "copy", "--check-first", "--progress",
+            "--include", f"{slug}_segment_*.ts",
+            "--ignore-existing",
+            "debates:debates2024/" + slug,
+            str(root_path),
+        ]
+
+        subprocess.run(cmd, check=True)
+        assert segment_path.exists()
+
     cmd = [
         "ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1",
         str(segment_path),
@@ -113,4 +130,3 @@ def make_m3u8(root_path, slug, service):
             f.write(direct_link(file_id) + "\n")
         f.write("#EXT-X-ENDLIST\n")
 
-    return direct_link(mp3_id, with_proxy=False)
