@@ -173,12 +173,12 @@ def transcribe_audio(audio_path, output_root, mp3_direct_link):
 
     name = audio_path.stem
 
-    if not audio_path.exists():
-        cmd = ["wget", "-O", str(audio_path), mp3_direct_link]
-        subprocess.run(cmd)
-
     if not (output_root / f"transcriptions/{name}.json").exists():
         Path(f"{output_root}/transcriptions").mkdir(exist_ok=True, parents=True)
+
+        if not audio_path.exists():
+            cmd = ["wget", "-O", str(audio_path), mp3_direct_link]
+            subprocess.run(cmd, check=True)
 
         cmd = [
             "whisperx",
