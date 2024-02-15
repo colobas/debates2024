@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.DEPLOY_TOKEN }}
+
       - uses: mamba-org/setup-micromamba@v1
         name: install deps
         with:
@@ -40,8 +43,6 @@ jobs:
         with:
           message: 'Update debates data'
           add: 'public/debates/'
-        env:
-          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
 
       - name: Refresh Rclone Config
         uses: AnimMouse/setup-rclone/update-config@v1
