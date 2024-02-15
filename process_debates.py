@@ -6,7 +6,6 @@ import logging
 import hashlib
 from pathlib import Path
 
-import yaml
 import json
 import re
 
@@ -345,7 +344,6 @@ if __name__ == "__main__":
     dotenv.load_dotenv()
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", type=str, default="debates.yaml")
     parser.add_argument("--output_root", type=str, default="public/debates")
     parser.add_argument("--output-master-json", type=str, default="src/debates.json")
     parser.add_argument("--force", action="store_true")
