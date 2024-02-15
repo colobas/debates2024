@@ -2,7 +2,7 @@ import subprocess
 from pathlib import Path
 import json
 from urllib.parse import quote
-from tqdm import trange
+from tqdm import trange, tqdm
 
 
 def set_public_permission(file_id, service):
