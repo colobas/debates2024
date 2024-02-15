@@ -7,6 +7,7 @@ dependencies:
   - ffmpeg=6.1.1
   - rclone
   - pip:
+    - tqdm
     - beautifulsoup4
     - python-dotenv
     - google-api-python-client

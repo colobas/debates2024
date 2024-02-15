@@ -9,6 +9,7 @@ dependencies:
   - ffmpeg=6.1.1
   - rclone
   - pip:
+    - tqdm
     - beautifulsoup4
     - git+https://github.com/m-bain/whisperx.git@8227807#egg=whisperx
     - torchaudio==2.0.0
