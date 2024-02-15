@@ -282,12 +282,15 @@ def scrape_page(url):
     # find <article> tags -> one per "episode"
     articles = div.find_all("article")
     for article in articles:
-        title = article.find("h4", class_="episode-title").text.strip()
-        title = " - ".join([speaker_party_conversion[s.strip()] for s in title.split(" - ")])
-        href = article.find("a", class_="episode-item")["href"]
+        try:
+            title = article.find("h4", class_="episode-title").text.strip()
+            title = " - ".join([speaker_party_conversion[s.strip()] for s in title.split(" - ")])
+            href = article.find("a", class_="episode-item")["href"]
 
-        if href is not None:
-            debates[title] = "https://www.rtp.pt" + href
+            if href is not None:
+                debates[title] = "https://www.rtp.pt" + href
+        except:
+            continue
 
     return debates
 
