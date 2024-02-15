@@ -1,8 +1,13 @@
 name: Build and Deploy
 on:
+  # run on changes to files in src/ or public/ in the main branch
   push:
+    paths:
+      - 'src/**'
+      - 'public/**'
     branches:
-      - main  # Set to your default branch
+      - main
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
