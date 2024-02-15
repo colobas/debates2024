@@ -12,7 +12,7 @@ import re
 import bs4
 import requests
 
-from video_utils import upload_to_gdrive, get_file_ids, direct_link
+from video_utils import upload_to_gdrive, get_file_ids, direct_link, make_m3u8
 from speaker_party_conversion import speaker_party_conversion
 
 
@@ -109,45 +109,50 @@ def get_audio_and_video(url, audio_path, headers=None, gdrive_service=None):
     if not m3u8_path.exists():
         mp4_path = audio_path.with_suffix(".mp4")
 
-        # download video
-        if not mp4_path.exists():
-            if headers is not None:
-                headers = "\r\n".join([f"{k}: {v}" for k,v in headers.items()]) + "\r\n"
-                cmd = ["ffmpeg", "-headers", headers, "-i", url, "-c", "copy", mp4_path]
-            else:
-                cmd = ["ffmpeg", "-i", url, "-c", "copy", mp4_path]
-            subprocess.run(cmd)
-
-        if not m3u8_orig_path.exists():
-            # create hls
-            options = [
-                "-hls_time", "10", # segment duration
-                "-hls_list_size", "0", # list all segments
-                "-hls_segment_filename", f"{m3u8_path.with_suffix('')}_segment_%03d.ts",
-                "-f", "hls",
-            ]
-
-            cmd = ["ffmpeg", "-i", mp4_path, *options, str(m3u8_orig_path)]
-            subprocess.run(cmd)
-
-            # upload to gdrive using rclone
-
-        if not audio_path.exists():
-            # extract audio
-            options = [
-                "-vn", # Disables video recording
-                "-acodec", "libmp3lame", # Specifies MP3 encoding
-                "-q:a", "0", # High quality audio
-               ]
-
-            cmd = ["ffmpeg", "-i", mp4_path, *options, audio_path]
-            subprocess.run(cmd)
-
-        # upload the video to youtube
-        mp3_direct_link = upload_to_gdrive(audio_path.parent, audio_path.stem, gdrive_service)
-    else:
         file_ids = get_file_ids(audio_path.stem)
-        mp3_direct_link = direct_link(file_ids[f"{audio_path.stem}.mp3"], with_proxy=False)
+
+        # if mp3 exists in gdrive, everything else is uploaded, skip downloading
+        if not f"{audio_path.stem}.mp3" in file_ids:
+            # download video
+            if not mp4_path.exists():
+                if headers is not None:
+                    headers = "\r\n".join([f"{k}: {v}" for k,v in headers.items()]) + "\r\n"
+                    cmd = ["ffmpeg", "-headers", headers, "-i", url, "-c", "copy", mp4_path]
+                else:
+                    cmd = ["ffmpeg", "-i", url, "-c", "copy", mp4_path]
+                subprocess.run(cmd)
+
+            if not m3u8_orig_path.exists():
+                # create hls
+                options = [
+                    "-hls_time", "10", # segment duration
+                    "-hls_list_size", "0", # list all segments
+                    "-hls_segment_filename", f"{m3u8_path.with_suffix('')}_segment_%03d.ts",
+                    "-f", "hls",
+                ]
+
+                cmd = ["ffmpeg", "-i", mp4_path, *options, str(m3u8_orig_path)]
+                subprocess.run(cmd)
+
+            if not audio_path.exists():
+                # extract audio
+                options = [
+                    "-vn", # Disables video recording
+                    "-acodec", "libmp3lame", # Specifies MP3 encoding
+                    "-q:a", "0", # High quality audio
+                   ]
+
+                cmd = ["ffmpeg", "-i", mp4_path, *options, audio_path]
+                subprocess.run(cmd)
+
+            # upload media
+            upload_to_gdrive(audio_path.parent, audio_path.stem, gdrive_service)
+
+        # make m3u8
+        make_m3u8(audio_path.parent, audio_path.stem, gdrive_service)
+
+    file_ids = get_file_ids(audio_path.stem)
+    mp3_direct_link = direct_link(file_ids[f"{audio_path.stem}.mp3"], with_proxy=False)
 
     return f"debates/media/{audio_path.stem}.m3u8", mp3_direct_link
 
