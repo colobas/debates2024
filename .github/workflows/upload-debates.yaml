@@ -33,7 +33,7 @@ jobs:
       - name: Process Debates
         env:
           CLIENT_SECRETS_FILE: gcloud.json
-        run: python process_debates.py public/debates --skip-transcription
+        run: python process_debates.py --skip-transcription
 
       - name: Commit and Push Changes
         uses: EndBug/add-and-commit@v7
