@@ -126,9 +126,12 @@ def make_m3u8(root_path, slug, service):
             f.write(direct_link(file_id) + "\n")
         f.write("#EXT-X-ENDLIST\n")
 
+    batch = service.new_batch_http_request()
     for file_id in tqdm(file_ids.values(), desc="Preparing batch request for public permissions..."):
         batch.add(service.permissions().create(
             fileId=file_id,
             body={'type': 'anyone', 'role': 'reader'},
         ))
+    print("Executing batch request...", end="")
     batch.execute()
+    print("\rExecuting batch request... Done.")
