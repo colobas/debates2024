@@ -1,5 +1,10 @@
 [
     {
+        "title": "IL - PCP",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12900/p12900_1_2024021415669.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "il-vs-pcp"
+    },
+    {
         "title": "Livre - PAN",
         "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12900/p12900_1_20240214190334e007t1448.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
         "slug": "livre-vs-pan"
@@ -63,6 +68,11 @@
         "title": "PS - IL",
         "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12899/p12899_20240205070320et0921.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
         "slug": "ps-vs-il"
+    },
+    {
+        "title": "PS - Chega",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12901/p12901_1_20240214000000e006t5838.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "ps-vs-chega"
     },
     {
         "title": "PCP - Livre",
