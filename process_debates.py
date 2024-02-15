@@ -5,6 +5,7 @@ import subprocess
 import logging
 import hashlib
 from pathlib import Path
+from tqdm import tqdm
 
 import json
 import re
@@ -201,7 +202,7 @@ def transcribe_audio(audio_path, output_root, mp3_direct_link):
             audio_path,
            ]
 
-        subprocess.run(cmd)
+        subprocess.run(cmd, check=True)
 
         # keep only the .vtt file
         for f in Path(f"{output_root}/transcriptions").glob(f"{name}.*"):
@@ -226,6 +227,8 @@ def process_debate(*, title, url, output_root, gdrive_service, skip_transcriptio
     # check if reverse slug exists, if so, slug is the reverse slug
     if (output_root / f"{rev_slug}.json").exists():
         slug = rev_slug
+
+    print(f"Processing '{slug}'...")
 
     m3u8_url, thumbnail_url = find_m3u8_and_thumbnail(url)
     if m3u8_url is None or thumbnail_url is None:
@@ -286,7 +289,7 @@ def scrape_page(url):
 
     # find <article> tags -> one per "episode"
     articles = div.find_all("article")
-    for article in articles:
+    for article in tqdm(articles, desc=f"Scraping {url}..."):
         try:
             title = article.find("h4", class_="episode-title").text.strip()
             title = " - ".join([speaker_party_conversion[s.strip()] for s in title.split(" - ")])
