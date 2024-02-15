@@ -11,7 +11,6 @@ import re
 
 import bs4
 import requests
-import webvtt
 
 from video_utils import upload_to_gdrive, get_file_ids, direct_link
 from speaker_party_conversion import speaker_party_conversion
@@ -27,6 +26,8 @@ def convert_to_seconds(time):
 
 
 def webvtt_to_json(vtt_path, output_path):
+    import webvtt
+
     # adapted from: https://github.com/simonw/webvtt-to-json/blob/main/webvtt_to_json/cli.py
     with open(vtt_path, "r") as vtt_file:
         captions = webvtt.read_buffer(vtt_file)
