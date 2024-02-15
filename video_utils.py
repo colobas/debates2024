@@ -101,14 +101,11 @@ def upload_to_gdrive(root_path, slug, service):
     ]
     subprocess.run(cmd, check=True)
 
+
 def make_m3u8(root_path, slug, service):
 
     # get segment file ids
     file_ids = get_file_ids(slug)
-
-    # get mp3 file id
-    mp3_id = file_ids[f"{slug}.mp3"]
-    set_public_permission(mp3_id, service)
 
     # make m3u8
     with open(f"{root_path}/{slug}.m3u8", "w") as f:
@@ -121,7 +118,6 @@ def make_m3u8(root_path, slug, service):
         for i in trange(n_segments, desc="Creating m3u8..."):
             segment_path = f"{slug}_segment_{i:0{n_digits}d}.ts"
             file_id = file_ids[segment_path]
-            set_public_permission(file_id, service)
 
             # get duration
             duration = get_segment_duration(root_path / segment_path)
@@ -130,3 +126,9 @@ def make_m3u8(root_path, slug, service):
             f.write(direct_link(file_id) + "\n")
         f.write("#EXT-X-ENDLIST\n")
 
+    for file_id in tqdm(file_ids.values(), desc="Preparing batch request for public permissions..."):
+        batch.add(service.permissions().create(
+            fileId=file_id,
+            body={'type': 'anyone', 'role': 'reader'},
+        ))
+    batch.execute()
