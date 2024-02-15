@@ -41,10 +41,10 @@ jobs:
           message: 'Update debates data'
           add: 'public/debates/'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
 
       - name: Refresh Rclone Config
         uses: AnimMouse/setup-rclone/update-config@v1
         with:
           rclone_config_secret_name: RCLONE_CONFIG
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.DEPLOY_TOKEN }}
