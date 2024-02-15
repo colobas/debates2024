@@ -84,6 +84,8 @@ def upload_to_gdrive(root_path, slug, service):
     ]
     subprocess.run(cmd, check=True)
 
+def make_m3u8(root_path, slug, service):
+
     # get segment file ids
     file_ids = get_file_ids(slug)
 
