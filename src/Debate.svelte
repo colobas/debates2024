@@ -62,7 +62,7 @@
       const messageElements = chatContainer.querySelectorAll('.message');
       messageElements.forEach((el, index) => {
         el.style.borderColor = index === currentMessageIndex ? 'black' : ''; // Highlight current message
-        el.style.borderWidth = index === currentMessageIndex ? '2px' : ''; // Increase border width for current message
+        el.style.borderWidth = index === currentMessageIndex ? '3px' : ''; // Increase border width for current message
       });
 
       const currentMessageElement = messageElements[currentMessageIndex];
