@@ -7,6 +7,7 @@
   let debateData = {}; // Initialize debateData
   let transcripts = []; // Initialize transcripts
   let speakerColors = {}; // Initialize speakerColors
+  let currentMessageIndex = null; // Initialize current message index
 
   // Async function to fetch debate data including video URL and headers
   async function fetchDebateData() {
@@ -35,7 +36,6 @@
     const video = document.getElementById('video');
     const video_url = `/debates/media/${params.slug}.m3u8`;
 
-    // print video_url to console
     console.log(video_url);
 
     if (Hls.isSupported()) {
@@ -51,25 +51,27 @@
     video.addEventListener('timeupdate', () => {
       if (!chatContainer) return;
       const currentTime = video.currentTime;
-      let lastPastMessageIndex = transcripts.findIndex((transcript, index) => {
+      currentMessageIndex = transcripts.findIndex((transcript, index) => {
         return index < transcripts.length - 1 && transcripts[index + 1].time > currentTime;
       });
 
-      if (lastPastMessageIndex === -1) {
-        lastPastMessageIndex = transcripts.length - 1; // If no future message, use the last one
+      if (currentMessageIndex === -1) {
+        currentMessageIndex = transcripts.length - 1; // If no future message, use the last one
       }
 
       const messageElements = chatContainer.querySelectorAll('.message');
-      const currentMessageElement = messageElements[lastPastMessageIndex];
+      messageElements.forEach((el, index) => {
+        el.style.borderColor = index === currentMessageIndex ? 'black' : ''; // Highlight current message
+        el.style.borderWidth = index === currentMessageIndex ? '2px' : ''; // Increase border width for current message
+      });
 
-      // if video is playing, auto scroll to the current message
+      const currentMessageElement = messageElements[currentMessageIndex];
       if (currentMessageElement && !video.paused) {
-        chatContainer.scrollTop = currentMessageElement.offsetTop - chatContainer.offsetTop - 20; // Adjust 20px offset if needed
+        chatContainer.scrollTop = currentMessageElement.offsetTop - chatContainer.offsetTop - 20;
       }
     });
   }
 
-  // A function to determine if the speaker changes between transcripts
   const getSpeakerSide = (index) => {
      if (index === 0){ return speakerSide };
      if (transcripts[index].speaker !== transcripts[index - 1].speaker) {
@@ -78,7 +80,6 @@
      return speakerSide;
   };
 
-  // Default side for the first speaker
   let speakerSide = "right";
  
   const setVideoTime = (time) => {
@@ -88,10 +89,6 @@
   onMount(async () => {
     await fetchDebateData();
     await assembleVideo();
-
-    transcripts.forEach((msg) => {
-      speakerColors[msg.speaker] = `hsl(${Math.floor(Math.random() * 360)}, 70%, 60%)`;
-    });
   });
 </script>
 
@@ -114,8 +111,8 @@
     width: 80%;
     margin: auto;
     flex-direction: column;
-    max-height: 400px; /* Limit the height of the chat container */
-    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 400px;
+    overflow-y: auto;
   }
   .message {
     padding: 10px;
@@ -123,6 +120,7 @@
     margin: 5px;
     max-width: 60%;
     cursor: pointer;
+    border: 1px solid transparent; /* Updated for highlighting */
   }
   .left {
     align-self: flex-start;
@@ -130,7 +128,6 @@
   .right {
     align-self: flex-end;
   }
-
 </style>
 
 <h1>{debateData.title}</h1>
@@ -138,12 +135,12 @@
 <video id="video" controls>
 </video>
 
-
 {#await fetchTranscripts()}
 {:then}
   <div class="chat-container">
     {#each transcripts as { speaker, text, time}, index}
-      <div class="message {getSpeakerSide(index)}" href="javascript:void(0)" style="background-color:{speakerColors[speaker]};"
+      <div class="message {getSpeakerSide(index)}" href="javascript:void(0)"
+           style="background-color:{speakerColors[speaker]}; border-color:{index === currentMessageIndex ? 'black' : 'transparent'}; border-width:{index === currentMessageIndex ? '3px' : '1px'};"
            on:click={() => setVideoTime(time)}>
         <strong>{speaker}:</strong> {text}
       </div>
