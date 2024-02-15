@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: mamba-org/setup-micromamba@v1
-        name: install whisperx and other deps
+        name: install deps
         with:
           micromamba-version: '1.3.1-0'
           environment-file: environment-simple.yml
@@ -33,7 +33,7 @@ jobs:
       - name: Process Debates
         env:
           CLIENT_SECRETS_FILE: gcloud.json
-        run: python process_debates.py public/debates --skip-transcription
+        run: python process_debates.py --skip-transcription
 
       - name: Commit and Push Changes
         uses: EndBug/add-and-commit@v7
@@ -41,10 +41,10 @@ jobs:
           message: 'Update debates data'
           add: 'public/debates/'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
 
       - name: Refresh Rclone Config
         uses: AnimMouse/setup-rclone/update-config@v1
         with:
           rclone_config_secret_name: RCLONE_CONFIG
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.DEPLOY_TOKEN }}
