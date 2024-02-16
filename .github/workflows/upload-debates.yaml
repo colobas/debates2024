@@ -47,9 +47,3 @@ jobs:
           message: 'Update debates data'
           add: 'public/debates/ src/debates.json'
 
-      - name: Refresh rclone config
-        shell: bash
-        run: base64 -w 0 ~/.config/rclone/rclone.conf | gh secret set "${{ secrets.RCLONE_CONFIG }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-          GH_REPO: ${{ github.repository }}
