@@ -107,6 +107,12 @@ def get_audio_and_video(url, audio_path, headers=None, gdrive_service=None):
     m3u8_path = audio_path.with_suffix(".m3u8")
     m3u8_orig_path = audio_path.with_suffix(".m3u8.orig")
 
+    # mkdir on gdrive in case it doesn't exist
+    cmd = [
+        "rclone", "mkdir", f"debates:debates2024/{audio_path.stem}",
+    ]
+    subprocess.run(cmd, check=True)
+
     if not m3u8_path.exists():
         mp4_path = audio_path.with_suffix(".mp4")
 
