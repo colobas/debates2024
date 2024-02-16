@@ -47,8 +47,3 @@ jobs:
           message: 'Update debates data'
           add: 'public/debates/ src/debates.json'
 
-      - name: Refresh Rclone Config
-        uses: AnimMouse/setup-rclone/update-config@v1
-        with:
-          rclone_config_secret_name: RCLONE_CONFIG
-          token: ${{ secrets.DEPLOY_TOKEN }}
