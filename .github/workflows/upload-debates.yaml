@@ -45,7 +45,7 @@ jobs:
         uses: EndBug/add-and-commit@v7
         with:
           message: 'Update debates data'
-          add: 'public/debates/'
+          add: 'public/debates/ src/debates.json'
 
       - name: Refresh Rclone Config
         uses: AnimMouse/setup-rclone/update-config@v1
