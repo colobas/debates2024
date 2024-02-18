@@ -1,7 +1,7 @@
 [
     {
         "title": "PS - BE",
-        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12900/p12900_1_20240216212338e009t8548.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12900/p12900_2_20240216000000e009t6997.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
         "slug": "ps-vs-be"
     },
     {
@@ -43,6 +43,11 @@
         "title": "Chega - PAN",
         "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12900/p12900_1_2024020515461.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
         "slug": "chega-vs-pan"
+    },
+    {
+        "title": "Chega - Livre",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12899/p12899_1_20240216000000e008t7963.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "chega-vs-livre"
     },
     {
         "title": "BE - PCP",
