@@ -1,5 +1,10 @@
 [
     {
+        "title": "PS - PSD",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12900/p12900_20240219113725e000t5716.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "ps-vs-psd"
+    },
+    {
         "title": "PS - BE",
         "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12900/p12900_2_20240216000000e009t6997.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
         "slug": "ps-vs-be"
@@ -45,6 +50,16 @@
         "slug": "chega-vs-pan"
     },
     {
+        "title": "PSD - IL",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12899/p12899_1_20240218000000e007t7597.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "psd-vs-il"
+    },
+    {
+        "title": "PS - PCP",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12899/p12899_1_20240217000000e009t3687.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "ps-vs-pcp"
+    },
+    {
         "title": "Chega - Livre",
         "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12899/p12899_1_20240216000000e008t7963.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
         "slug": "chega-vs-livre"
@@ -78,6 +93,16 @@
         "title": "PS - IL",
         "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12899/p12899_20240205070320et0921.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
         "slug": "ps-vs-il"
+    },
+    {
+        "title": "BE - PAN",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12901/p12901_1_20240218000000e009t8930.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "be-vs-pan"
+    },
+    {
+        "title": "PSD - Livre",
+        "thumbnail": "https://cdn-images.rtp.pt/multimedia/screenshots/p12901/p12901_1_20240217000000e008t3095.jpg?q=100&format=pjpg&auto=webp&v=3&w=400",
+        "slug": "psd-vs-livre"
     },
     {
         "title": "IL - BE",
